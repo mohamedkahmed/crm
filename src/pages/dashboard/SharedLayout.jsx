@@ -1,18 +1,21 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import {Sidebar, Topbar} from "../../components"
 import "./SharedLayout.scss"
 const SharedLayout = () => {
+  const user = true;
+  const navigate = useNavigate();
   return (
     <>
-    <main className='dashboard'>
+    {user ?    <main className='dashboard'>
       <Sidebar/>
       <div>
         <Topbar/>
         <div className="dashboard-page">
-          <Outlet/>
+        <Outlet/>
         </div>
       </div>
-    </main>
+    </main> : navigate('/login')}
+
     </>
   )
 }

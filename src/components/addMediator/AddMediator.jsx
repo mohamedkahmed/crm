@@ -6,47 +6,47 @@ import { FiPlus } from "react-icons/fi";
 import { useState } from "react";
 import { FaUsers } from "react-icons/fa";
 import { SingleBraedcrumb } from "../../components";
-import "./AddClient.scss";
-const AddClient = () => {
-  const [imageFile, setImageFile] = useState(employeesPerson);
-  const navigate = useNavigate();
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImageFile(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    navigate("/client", { replace: true });
-  };
+import "./AddMediator.scss";
+const AddMediator = () => {
+    const [imageFile, setImageFile] = useState(employeesPerson);
+    const navigate = useNavigate();
+    const handleFileChange = (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => {
+          setImageFile(reader.result);
+        };
+        reader.readAsDataURL(file);
+      }
+    };
+  
+    const onSubmit = (e) => {
+      e.preventDefault();
+      navigate("/mediator", { replace: true });
+    };
   return (
-    <section className="add-client">
+    <section className="add-mediator">
       <div className="container">
-        <div className="add-client-top">
+        <div className="add-mediator-top">
           <div className="m-b-c">
-            <SingleBraedcrumb icon={<FaUsers />} title="العملاء" />
+            <SingleBraedcrumb icon={<FaUsers />} title="الوسطاء" />
           </div>
           <div className="add-new">
             {" "}
-            <NavLink to="/client">
+            <NavLink to="/mediator">
               <HiArrowLongRight />
               عودة
             </NavLink>{" "}
           </div>
         </div>
 
-        <div className="add-client-data">
+        <div className="add-mediator-data">
           <div className="add-text">
-            <p>ادخل بيانات العميل</p>
+            <p>ادخل بيانات الوسيط</p>
           </div>
           <form action="" onSubmit={onSubmit}>
-            <div className="add-client-image">
+            <div className="add-mediator-image">
               {imageFile === employeesPerson ? (
                 <img className="image-person" src={imageFile} alt="person" />
               ) : (
@@ -66,7 +66,7 @@ const AddClient = () => {
             <div className="main-inputs">
               <div className="chi-in">
                 <div>
-                  <label>اسم العميل*</label>
+                  <label>اسم الوسيط*</label>
                   <input type="text" name="text" required />
                 </div>
                 <div>
@@ -106,7 +106,7 @@ const AddClient = () => {
               </div>
             </div>
             <div className="btn-down">
-              <NavLink className="cancel" to="/client">
+              <NavLink className="cancel" to="/mediator">
                 الغاء
               </NavLink>
               <button className="save" type="submit">
@@ -117,7 +117,7 @@ const AddClient = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AddClient;
+export default AddMediator

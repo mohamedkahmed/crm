@@ -27,7 +27,7 @@ const AddEmployees = () => {
 
   return (
     <section className="add-employees">
-      <div className="contaienr">
+      <div className="container">
         <div className="add-employees-top">
           <div className="m-b-c">
             <SingleBraedcrumb icon={<HiUsers />} title="الموظفين" />

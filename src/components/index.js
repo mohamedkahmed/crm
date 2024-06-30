@@ -9,4 +9,6 @@ import AddProject from "./addProject/AddProject.jsx";
 import AddPower from "./addPower/AddPower.jsx";
 import AddClient from "./addClient/AddClient.jsx";
 import AddCalendar from "./addCalendar/AddCalendar.jsx";
-export {AddProject, AddCalendar, AddClient, AddPower, Sidebar, AddEmployees, Searchbar, Topbar, BreadCrumb, AboutUser, SingleBraedcrumb}
+import AddMediator from "./addMediator/AddMediator.jsx";
+
+export {AddProject, AddMediator, AddCalendar, AddClient, AddPower, Sidebar, AddEmployees, Searchbar, Topbar, BreadCrumb, AboutUser, SingleBraedcrumb}
