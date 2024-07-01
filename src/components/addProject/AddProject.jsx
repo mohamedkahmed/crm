@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { PiBuildingsFill } from "react-icons/pi";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { FaUsers } from "react-icons/fa";
@@ -5,16 +6,38 @@ import { IoMdLink } from "react-icons/io";
 import DetailsBox from "./DetailsBox";
 import "./AddProject.scss";
 import { NavLink, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 const AddProject = () => {
     const navigate = useNavigate();
-    const onSubmit = (e) => {
-        e.preventDefault();
-/*         const fromDatat = new FormData(e.currentTarget)
-        const data = Object.fromEntries(fromDatat)
-        console.log(data) */
-        navigate ("/projects", {replace: true})
-      }
+    const [images_video , setimages_video] = useState([])
+    const [images_error , setimage_error] = useState(false)
+    const [show_a, setShowA] = useState();
+    const [show_b, setShowB] = useState();
+    const [show_c, setShowC] = useState();
+    const [docs , setDocs] = useState([])
+    // handel submit project 
+const onSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget)
+    formData.set("opeartion-type" , show_a)
+    formData.set("installment-avillbale" , show_b)
+    formData.set("Finishing quality" , show_c)
+  // append list of images-videos to formData
+    for(let i = 0 ; i < images_video.length ; i++) {
+        formData.append(`images-videos[${i}]`, images_video[i])
+    }
+      // append list of docs to formData
+
+    for(let i = 0 ; i < docs.length ; i++) {
+        formData.append(`docs[${i}]`, docs[i])
+    }
+    const data = Object.fromEntries(formData)
+ 
+    toast.success("project add sucssfuly" , {position:"top-center"})
+    // navigate ("/projects", {replace: true})
+    }
   return (
     <section className='add_project_section'>
         <div className="title_top">
@@ -51,7 +74,7 @@ const AddProject = () => {
                 </div>
             </div>
             <div className="left_details_box">
-                <form action="" onSubmit={onSubmit}>
+                <form  onSubmit={onSubmit}>
                 <div className="l_d_b_t">
                     <div className="icon">
                     <FaRegPenToSquare />
@@ -61,7 +84,7 @@ const AddProject = () => {
 
                 {/* here is Project Box */}
 
-                <DetailsBox/>
+                <DetailsBox show_c={show_c} setShowC={setShowC} show_b ={show_b} setShowB={setShowB} show_a={show_a} setShowA={setShowA} images_video ={images_video} setimages_video={setimages_video} docs={docs} setDocs={setDocs}/>
 
 
 
