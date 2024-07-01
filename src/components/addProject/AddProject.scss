@@ -253,6 +253,9 @@
                         width: 100%;
                         border: none;
                         box-shadow: $shadow-2;
+                        .input-file{
+                            display: none;
+                        }
                         .dropdown-item {
                             text-align: start;
                             padding: 0.5rem;

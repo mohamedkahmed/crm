@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { FaChevronDown } from "react-icons/fa6";
 import { FiPlus } from "react-icons/fi";
 import { MdAttachFile } from "react-icons/md";
 import { useState } from "react";
+import Uploadeproject from './../addprojectImagesuploade/Uploadeproject';
 
 const DetailsBox = () => {
   const finishing_c = ["صيانة", "بيع", "تاجير"];
@@ -19,6 +21,22 @@ const DetailsBox = () => {
   const handleButtonClickC = (buttonId) => {
     setShowC(buttonId);
   };
+  const [images_video , setimages_video] = useState([])
+ const [images_error , setimage_error] = useState(false)
+ const allowedExtensions = ["jpg", "jpeg", "png", "mp4", "mpeg"]
+//  const handeluploads = (files) => {
+//   setimages_video(files)
+//   for (let i = 0 ; i < images_video.length ; i++) {
+//     const filename = images_video[i].name
+//     const fileExtions = filename.split(".").pop().toLowerCase()
+//     if(!allowedExtensions.includes(fileExtions)) {
+//      return setimage_error(true)
+//     } else {
+//       return setimage_error(false)
+//     }
+//   }
+//  }
+console.log(images_video);
   return (
     <>
       <div className="project_box">
@@ -127,6 +145,7 @@ const DetailsBox = () => {
             </div>
           </div>
           <div className="add_files">
+          
             <div className="dropdown">
               <button
                 className="btn btn-secondary dropdown-toggle"
@@ -138,16 +157,23 @@ const DetailsBox = () => {
                   <FiPlus /> إضافة مرفقات
                 </div>
               </button>
-              <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
+              <div className="dropdown-menu" >
+               <label htmlFor="files" className="dropdown-item">
                   {" "}
                   <img src="/images/Vector.svg" alt="Vector" /> اختر من الملفات
-                </a>
-                <a className="dropdown-item" href="#">
+                  </label>
+                  <input type="file" multiple className="input-file" id="files" />
+                <label htmlFor="image-video" className="dropdown-item">
                   <img src="/images/Group.svg" alt="Group" /> اختر صورة او فيديو{" "}
-                </a>
+                  </label>
+                  <input onChange={(e) =>setimages_video([...e.target.files , ...images_video])} type="file"   accept="video/*,image/*" multiple className="input-file" id="image-video" />
               </div>
+             
             </div>
+            {
+              images_video.length ?  <Uploadeproject images ={images_video} setimages ={setimages_video} /> :null
+            }
+           
           </div>
       </div>
     </>
