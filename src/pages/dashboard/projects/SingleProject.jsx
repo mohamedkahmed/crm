@@ -5,6 +5,11 @@ import { PiBuildingsFill } from "react-icons/pi";
 import { FiPlus } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import { projectsPro } from "../../../assets/Data/Data";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { BiSolidShow } from "react-icons/bi";
+import { GrEdit } from "react-icons/gr";
+import { MdDelete } from "react-icons/md";
+
 import { useParams } from "react-router-dom";
 import "./Projects.scss";
 import "./AsNavFor.scss";
@@ -32,6 +37,7 @@ const SingleProject = () => {
     realSpace,
     installmentsNum,
     propertyAmount,
+    allTaks
   } = project;
   return (
     <section className="single_project_wrapper">
@@ -48,7 +54,6 @@ const SingleProject = () => {
               <FiPlus />
               اضافة مشروع
             </NavLink>
-            <input type="date" name="date" lang="ar" />
           </div>
         </div>
         <div className="single_project_box">
@@ -95,16 +100,64 @@ const SingleProject = () => {
                 );
               })}
             </div>
+
+{/* here all tasks */}
+
             <div
               style={
                 show_a === "كل المهام"
-                  ? { display: "block" }
+                  ? { display: "grid" }
                   : { display: "none" }
               }
               className="all_tasks"
             >
-              all tasks
+
+              {allTaks.map((data) => {
+                const {id,validity,name, img, date, phone, projectMan} = data;
+                return (
+
+              <div className="box_content" key={id}>
+                <div className="top_mang">
+                  <p>{validity}</p>
+                  <div className="dropdown">
+  <button type="button" data-toggle="dropdown" aria-expanded="false">
+  <HiOutlineDotsHorizontal />
+  </button>
+  <div className="dropdown-menu">
+    <Link className="dropdown-item" to="/reportDetails">عرض <BiSolidShow />
+    </Link>
+    <Link className="dropdown-item" to="#">تعديل <GrEdit />
+    </Link>
+    <Link className="dropdown-item" style={{color: "red"}} to="#">حذف <MdDelete style={{color: "red"}} />
+    </Link>
+  </div>
+</div>
+
+                </div>
+                <div className="client_content">
+                  <div className="img_name">
+                    <div>
+                      <img src={img} alt="user img" />
+                    </div>
+                    <div>
+                      <p>{name}</p>
+                      <span>{date}</span>
+                    </div>
+                  </div>
+                  <div className="phone">
+                    <p>{phone}</p>
+                  </div>
+                </div>
+                <div className="end_pro">
+                  <p>{projectMan}</p>
+                </div>
+              </div>
+                )
+              })}
+
             </div>
+
+
             <div
               className="project_details_sin"
               style={

@@ -2,6 +2,10 @@ import { GiStabbedNote } from "react-icons/gi";
 import { SingleBraedcrumb } from "../../../components";
 import { FiPlus } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import { BiSolidShow } from "react-icons/bi";
+import { GrEdit } from "react-icons/gr";
+import { MdDelete } from "react-icons/md";
+
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { all_tasks } from "../../../assets/Data/Data";
 import "./Mission.scss";
@@ -143,7 +147,19 @@ const Mission = () => {
               <div className="box_content" key={id}>
                 <div className="top_mang">
                   <p>{validity}</p>
-                  <HiOutlineDotsHorizontal />
+                  <div className="dropdown">
+  <button type="button" data-toggle="dropdown" aria-expanded="false">
+  <HiOutlineDotsHorizontal />
+  </button>
+  <div className="dropdown-menu">
+    <a className="dropdown-item" href="#">عرض <BiSolidShow />
+    </a>
+    <a className="dropdown-item" href="#">تعديل <GrEdit />
+    </a>
+    <a className="dropdown-item" style={{color: "red"}} href="#">حذف <MdDelete style={{color: "red"}} />
+    </a>
+  </div>
+</div>
                 </div>
                 <div className="client_content">
                   <div className="img_name">

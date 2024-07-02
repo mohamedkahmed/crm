@@ -12,5 +12,6 @@ import SharedLayout from "./SharedLayout.jsx";
 import Client from "./client/Client.jsx";
 import Mediator from "./mediator/Mediator.jsx";
 import SingleProject from "./projects/SingleProject.jsx";
+import ReportDetails from "./reportDetails/ReportDetails.jsx";
 
-export {Home,SingleProject, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+export {Home,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
