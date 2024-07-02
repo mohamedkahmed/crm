@@ -36,6 +36,7 @@ const onSubmit = (e) => {
     const data = Object.fromEntries(formData)
  
     toast.success("project add sucssfuly" , {position:"top-center"})
+    console.log(data);
     // navigate ("/projects", {replace: true})
     }
   return (

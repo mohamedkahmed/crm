@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-
 import DataTable from "react-data-table-component";
 import "../tableStyle/TableStyle.scss";
 
-const AboutEmployees = ({ columns, data }) => {
+const ReportTable = ({columns , data}) => {
   return (
-    <>
+    <div>
+           <>
       <div className="main_table_styles">
         <DataTable
           columns={columns}
@@ -16,7 +16,8 @@ const AboutEmployees = ({ columns, data }) => {
         ></DataTable>
       </div>
     </>
-  );
-};
+    </div>
+  )
+}
 
-export default AboutEmployees;
+export default ReportTable

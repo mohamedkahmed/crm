@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import React, { useState } from "react";
 import { SingleBraedcrumb } from "../../../components";
 import { FaSearch } from "react-icons/fa";
@@ -8,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import EmployessTapel from "./EmployeesTable";
 import "./Employees.scss";
+import CoustomeLink from "../../../components/coutomeLink/CoustomeLink";
 const Employees = () => {
   const columns = [
     {
@@ -320,13 +323,8 @@ const Employees = () => {
             <div className="m-b-c">
               <SingleBraedcrumb icon={<HiUsers />} title="الموظفين" />
             </div>
-            <div className="add-new">
-              {" "}
-              <NavLink to="/addemployees">
-                <FiPlus />
-                اضافة جديد
-              </NavLink>{" "}
-            </div>
+          
+            <CoustomeLink url={"/addemployees"} text={"إضاف جديد"}/>
           </div>
 
           {/* employees box */}
@@ -356,7 +354,7 @@ const Employees = () => {
                       name="date"
                       onChange={handleDate}
                       value={selectedDate}
-                      locale="ar"
+                      
                     />
                   </form>
                 </div>
