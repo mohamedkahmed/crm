@@ -1,4 +1,4 @@
-import { HiUsers } from "react-icons/hi";
+// import { HiUsers } from "react-icons/hi";
 import { HiArrowLongRight } from "react-icons/hi2";
 import employeesPerson from "../../assets/images/employees_person.png";
 import { NavLink, useNavigate } from "react-router-dom";

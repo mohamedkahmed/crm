@@ -13,5 +13,6 @@ import Client from "./client/Client.jsx";
 import Mediator from "./mediator/Mediator.jsx";
 import SingleProject from "./projects/SingleProject.jsx";
 import ReportDetails from "./reportDetails/ReportDetails.jsx";
-
-export {Home,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+import UpdateProject from "./updateProject/UpdateProject.jsx";
+import Updateemployeer from "./updateemployer/Updateemployeer.jsx";
+export {Home,UpdateProject, Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
