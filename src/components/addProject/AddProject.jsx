@@ -10,16 +10,6 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 const AddProject = () => {
-<<<<<<< HEAD
-  const navigate = useNavigate();
-  const onSubmit = (e) => {
-    e.preventDefault();
-    /*         const fromDatat = new FormData(e.currentTarget)
-        const data = Object.fromEntries(fromDatat)
-        console.log(data) */
-    navigate("/projects", { replace: true });
-  };
-=======
     const navigate = useNavigate();
     const [images_video , setimages_video] = useState([])
     const [images_error , setimage_error] = useState(false)
@@ -49,7 +39,6 @@ const onSubmit = (e) => {
     console.log(data);
     // navigate ("/projects", {replace: true})
     }
->>>>>>> b1d3c73e356c87013ae60f6dbcf7e03908782406
   return (
     <section className="add_project_section">
       <div className="container">
@@ -67,46 +56,7 @@ const onSubmit = (e) => {
                 <p>ادخل تفاصيل العقار</p>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className="Project_completion_stage">
-              <div className="icon">
-                <FaUsers />
-              </div>
-              <div className="text">
-                <p>العملاء</p>
-                <p>اخيار العميل</p>
-              </div>
-=======
-            <div className="left_details_box">
-                <form  onSubmit={onSubmit}>
-                <div className="l_d_b_t">
-                    <div className="icon">
-                    <FaRegPenToSquare />
-                    </div>                    
-                    <p>ادخل بيانات العقار</p>
-                </div>
-
-                {/* here is Project Box */}
-
-                <DetailsBox show_c={show_c} setShowC={setShowC} show_b ={show_b} setShowB={setShowB} show_a={show_a} setShowA={setShowA} images_video ={images_video} setimages_video={setimages_video} docs={docs} setDocs={setDocs}/>
-
-
-
-                <div className="add_return">
-                    <div className="return_btn">
-                    <NavLink to="/projects">
-                عودة 
-              </NavLink>
-                    </div>
-                    <div className="add_btn">
-              <button className="btn_submit" type="submit">
-                اضافة 
-              </button>
-                    </div>
-                </div>
-                </form>
->>>>>>> b1d3c73e356c87013ae60f6dbcf7e03908782406
-            </div>
+          
             <div className="Project_completion_stage">
               <div className="icon">
                 <IoMdLink />
@@ -128,7 +78,7 @@ const onSubmit = (e) => {
 
               {/* here is Project Box */}
 
-              <DetailsBox />
+              <DetailsBox show_c={show_c} setShowC={setShowC} show_b ={show_b} setShowB={setShowB} show_a={show_a} setShowA={setShowA} images_video ={images_video} setimages_video={setimages_video} docs={docs} setDocs={setDocs}/>
 
               <div className="add_return">
                 <div className="return_btn">

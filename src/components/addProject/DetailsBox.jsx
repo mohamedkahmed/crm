@@ -15,7 +15,7 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
  // handel options functions odf state
   const handleButtonClickA = (buttonId) => {
     setShowA(buttonId);
-  };
+  }
  
   const handleButtonClickB = (buttonId) => {
     setShowB(buttonId);
@@ -146,7 +146,7 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
              
             </div>
             {
-              images_video.length ?  <Uploadeproject images ={images_video} setimages ={setimages_video} docs={docs} setdocs={setDocs} /> :null
+              images_video.length ?  <Uploadeproject images ={images_video} setImages ={setimages_video} docs={docs} setDocs={setDocs} /> :null
             }
            <br />
          
