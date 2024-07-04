@@ -11,6 +11,7 @@
           gap: 10px;
           button {
             @include Btn_style;
+            background-color: transparent;
           }
           .modal {
             z-index: 99999999999;

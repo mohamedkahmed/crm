@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./pages/error/Error";
 import {Home,Mediator ,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
-import { AddEmployees, AddProject, AddPower, AddClient, AddMediator, AddCalendar } from "./components";
+import { AddEmployees, AddProject, AddPower, AddClient, AddMediator } from "./components";
 import Login from "./pages/auth/login/Login";
 import ForgetPass from "./pages/auth/forgetPass/forgetPass";
 import ResetPass from "./pages/auth/resetPass/ResetPass";
@@ -27,7 +27,6 @@ const App = () => {
 <Route path="addPower" element={<AddPower/>}/>
 <Route path="addClient" element={<AddClient/>}/>
 <Route path="addMediator" element={<AddMediator/>}/>
-<Route path="addCalendar" element={<AddCalendar/>}/>
 <Route path="reportDetails" element={<ReportDetails/>}/>
 <Route path="SingleProject/:id" element={<SingleProject/>}/>
 </Route>
