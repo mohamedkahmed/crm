@@ -12,7 +12,7 @@ const Formupdateui = ({images_video , setimages_video , docs , setDocs , show_a 
     }
    
     const handleButtonClickB = (buttonId) => {
-      setShowB(buttonId);
+      setShowB(buttonId)
     };
    
     const handleButtonClickC = (buttonId) => {
@@ -58,7 +58,7 @@ const Formupdateui = ({images_video , setimages_video , docs , setDocs , show_a 
             </div>
             <div className="project_address">
               <label htmlFor="exampleFormControlSelect6">العنوان بالتفصيل*</label>
-              <input type="text" name="adress" id="exampleFormControlSelect6" />
+              <input type="text" name="adress" id="exampleFormControlSelect6" defaultValue={"12 شارع الحسيتى بالجيزه "} />
             </div>
             <div className="client_dir">
           
@@ -80,7 +80,7 @@ const Formupdateui = ({images_video , setimages_video , docs , setDocs , show_a 
             </div>
             <div className="project_price">
               <label htmlFor="exampleFormControlSelect8">اضف مبلغ العقار</label>
-              <input type="text" name="estate-price" id="exampleFormControlSelect8" />
+              <input type="text" name="estate-price" id="exampleFormControlSelect8" defaultValue={"1000"} />
             </div>
             <div className="finishing_c">
               <p className="pt-3">امكانية التقسيط</p>
@@ -95,11 +95,11 @@ const Formupdateui = ({images_video , setimages_video , docs , setDocs , show_a 
             </div>
             <div className="project_price">
               <label htmlFor="exampleFormControlSelect9">عدد الاقساط  / سنة</label>
-              <input type="text" name="installment-number" id="exampleFormControlSelect9"  />
+              <input type="text" name="installment-number" id="exampleFormControlSelect9" defaultValue={"4"} />
             </div>
             <div className="project_price">
               <label htmlFor="exampleFormControlSelect10">المساحة / متر*</label>
-              <input type="text" name="estate-measure" id="exampleFormControlSelect10" />
+              <input type="text" name="estate-measure" id="exampleFormControlSelect10" defaultValue={"10م"} />
             </div>
             <div className="finishing_c">
               <p className="pt-3">جودة التشطيب</p>

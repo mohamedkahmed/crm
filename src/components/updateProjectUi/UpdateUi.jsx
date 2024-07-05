@@ -11,9 +11,9 @@ import toast from "react-hot-toast";
 const UpdateUi = () => {
     // const navigate = useNavigate();
     const [images_video , setimages_video] = useState([])
-    const [show_a, setShowA] = useState();
-    const [show_b, setShowB] = useState();
-    const [show_c, setShowC] = useState();
+    const [show_a, setShowA] = useState("تاجير");
+    const [show_b, setShowB] = useState("غير متاح التقسيط");
+    const [show_c, setShowC] = useState("عادي");
     const [docs , setDocs] = useState([])
     // handel submit project 
 const onSubmit = (e) => {

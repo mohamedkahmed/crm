@@ -94,7 +94,7 @@ const projects = () => {
                   </div>
                 </div>
                 <div className="btn_project_det">
-                  <Link className="btn_deta" to={`/SingleProject/${id}`}>
+                  <Link className="btn_deta" to={`/projects/${id}`}>
                     تفاصيل
                   </Link>
                   <Link style={{backgroundColor:"#898989"}} className="btn_deta" to={``}>

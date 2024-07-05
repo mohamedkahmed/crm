@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import {SingleBraedcrumb} from "../../../components";
 import { FaSearch } from "react-icons/fa";
@@ -380,7 +381,7 @@ const Client = () => {
                     name="date"
                     onChange={handleDate}
                     value={selectedDate}
-                    locale="ar"
+                
                   />
                 </form>
               </div>

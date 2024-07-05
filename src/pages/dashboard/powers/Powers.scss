@@ -6,7 +6,7 @@
         align-items: center;
         justify-content: space-between;
         .add-new {
-            a {
+            button {
                 @include Btn_style;
             }
         }
@@ -75,3 +75,25 @@
         }
     }
 }
+
+    .project_price {
+        padding: 10px;
+        width: 100%;
+        label {
+            font-size: $font-16;
+            font-weight: 400;
+            color: $black-13;
+            margin: 5px;
+        }
+        input {
+           width: 100%;
+           margin: 5px;
+            outline: none;
+            display: block;
+            border: 1px solid $black-5;
+            border-radius: $border-radius;
+            padding: 7px 10px;
+            font-size: 14px;
+        }
+    }
+

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {SingleBraedcrumb } from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { MdLibraryAddCheck } from "react-icons/md";
@@ -8,6 +8,8 @@ import { NavLink } from "react-router-dom";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import PowersTabel from "./PowersTabel";
 import "./Powers.scss";
+import Modulefade from "./Modulefade";
+
 const Powers = () => {
   const columns = [
     {
@@ -248,13 +250,16 @@ const Powers = () => {
               />
             </div>
             <div className="add-new">
-              <NavLink to="/addPower">
-                <FiPlus />
-                اضافة جديد
-              </NavLink>
-            </div>
+      
+               <button data-toggle="modal" data-target="#staticBackdrop">
+              <FiPlus />
+              اضافة صلاحيه
+            </button>
+           
+            </div> 
+           
           </div>
-
+          <Modulefade /> 
           {/* powers table */}
 
           <div className="powers_box">
