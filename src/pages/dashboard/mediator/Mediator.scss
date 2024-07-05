@@ -1,5 +1,41 @@
 @import "../../../components/variables/Variables.scss";
 @import "../../../components/mixin/Mixin.scss";
+.dropdown {
+    button {
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-color: transparent;
+      outline: none;
+      cursor: pointer;
+      color: #656565;
+      transition: all 0.2s ease-in-out;
+    }
+    .dropdown-menu {
+      background-color: white;
+      border: none;
+      box-shadow: 0px 0px 6px -1px rgba(0, 0, 0, 0.247), 0px 0px 14px -1px rgba(0, 0, 0, 0.06);
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        text-align: start;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:hover {
+          background-color: $blue-2;
+        }
+        &:last-child {
+          &:hover {
+            background-color: rgba(255, 0, 0, 0.137) !important;
+          }
+        }
+      }
+    }
+    
+  }
 .main_mediator_wrapper {
     .mediator_top {
         display: flex;

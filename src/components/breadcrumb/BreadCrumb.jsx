@@ -9,15 +9,14 @@ const BreadCrumb = () => {
   const titles = {
     "/": "",
     "/projects": "المشاريع",
-    "/administration": "الادارة",
     "/calendar": "التقويم",
     "/employees": "الموظفين",
     "/addemployees": "الموظفين   ",
     "/invoices": "الفواتير",
     "/reports": "التقارير",
     "/mission": "المهام",
-    "/powers": "الصلاحيات",
-    "/expenses": "المصروفات",
+    "/powers": "الادارة",
+    "/expenses": "الادارة",
     "/mediator": "العملاء",
     "/client": "العملاء"
   };
