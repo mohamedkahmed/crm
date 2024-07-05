@@ -3,8 +3,11 @@ import {SingleBraedcrumb} from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import employeesImage from "../../../assets/images/employees-user.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
+import { BiSolidShow } from "react-icons/bi";
+import { GrEdit } from "react-icons/gr";
+import { MdDelete } from "react-icons/md";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import ClientTaple from "./ClientTaple";
 import "./Client.scss";
@@ -43,6 +46,24 @@ const Client = () => {
     {
       name: "اجراء",
       selector: (row) => row.procedure,
+      cell: (row) => (
+        <div className="dropdown">
+          <button type="button" data-toggle="dropdown" aria-expanded="false">
+            {row.procedure}
+          </button>
+          <div className="dropdown-menu">
+            <Link className="dropdown-item" to="#">
+              عرض <BiSolidShow />
+            </Link>
+            <Link className="dropdown-item" to="#">
+              تعديل <GrEdit />
+            </Link>
+            <Link className="dropdown-item" style={{ color: "red" }} href="#">
+              حذف <MdDelete style={{ color: "red" }} />
+            </Link>
+          </div>
+        </div>
+      ),
     },
   ];
   const data = [

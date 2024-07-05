@@ -6,9 +6,12 @@ import { FaSearch } from "react-icons/fa";
 import { HiUsers } from "react-icons/hi";
 import { FiPlus } from "react-icons/fi";
 import employeesImage from "../../../assets/images/employees-user.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import EmployessTapel from "./EmployeesTable";
+import { BiSolidShow } from "react-icons/bi";
+import { GrEdit } from "react-icons/gr";
+import { MdDelete } from "react-icons/md";
 import "./Employees.scss";
 import CoustomeLink from "../../../components/coutomeLink/CoustomeLink";
 const Employees = () => {
@@ -42,6 +45,24 @@ const Employees = () => {
     {
       name: "اجراء",
       selector: (row) => row.procedure,
+      cell: (row) => (
+        <div className="dropdown">
+          <button type="button" data-toggle="dropdown" aria-expanded="false">
+            {row.procedure}
+          </button>
+          <div className="dropdown-menu">
+            <Link className="dropdown-item" to="#">
+              عرض <BiSolidShow />
+            </Link>
+            <Link className="dropdown-item" to="#">
+              تعديل <GrEdit />
+            </Link>
+            <Link className="dropdown-item" style={{ color: "red" }} href="#">
+              حذف <MdDelete style={{ color: "red" }} />
+            </Link>
+          </div>
+        </div>
+      ),
     },
   ];
 

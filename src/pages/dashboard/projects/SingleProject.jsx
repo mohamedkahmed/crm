@@ -37,7 +37,7 @@ const SingleProject = () => {
     realSpace,
     installmentsNum,
     propertyAmount,
-    allTaks
+    allTaks,
   } = project;
   return (
     <section className="single_project_wrapper">
@@ -101,7 +101,7 @@ const SingleProject = () => {
               })}
             </div>
 
-{/* here all tasks */}
+            {/* here all tasks */}
 
             <div
               style={
@@ -111,52 +111,62 @@ const SingleProject = () => {
               }
               className="all_tasks"
             >
-
               {allTaks.map((data) => {
-                const {id,validity,name, img, date, phone, projectMan} = data;
+                const { id, validity, name, img, date, phone, projectMan } =
+                  data;
                 return (
-
-              <div className="box_content" key={id}>
-                <div className="top_mang">
-                  <p>{validity}</p>
-                  <div className="dropdown">
-  <button type="button" data-toggle="dropdown" aria-expanded="false">
-  <HiOutlineDotsHorizontal />
-  </button>
-  <div className="dropdown-menu">
-    <Link className="dropdown-item" to="/reportDetails">عرض <BiSolidShow />
-    </Link>
-    <Link className="dropdown-item" to="#">تعديل <GrEdit />
-    </Link>
-    <Link className="dropdown-item" style={{color: "red"}} to="#">حذف <MdDelete style={{color: "red"}} />
-    </Link>
-  </div>
-</div>
-
-                </div>
-                <div className="client_content">
-                  <div className="img_name">
-                    <div>
-                      <img src={img} alt="user img" />
+                  <div className="box_content" key={id}>
+                    <div className="top_mang">
+                      <p>{validity}</p>
+                      <div className="dropdown">
+                        <button
+                          type="button"
+                          data-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <HiOutlineDotsHorizontal />
+                        </button>
+                        <div className="dropdown-menu">
+                          <Link
+                            className="dropdown-item"
+                            to="/reportDetails/123"
+                          >
+                            عرض <BiSolidShow />
+                          </Link>
+                          <Link className="dropdown-item" to="#">
+                            تعديل <GrEdit />
+                          </Link>
+                          <Link
+                            className="dropdown-item"
+                            style={{ color: "red" }}
+                            to="#"
+                          >
+                            حذف <MdDelete style={{ color: "red" }} />
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <p>{name}</p>
-                      <span>{date}</span>
+                    <div className="client_content">
+                      <div className="img_name">
+                        <div>
+                          <img src={img} alt="user img" />
+                        </div>
+                        <div>
+                          <p>{name}</p>
+                          <span>{date}</span>
+                        </div>
+                      </div>
+                      <div className="phone">
+                        <p>{phone}</p>
+                      </div>
+                    </div>
+                    <div className="end_pro">
+                      <p>{projectMan}</p>
                     </div>
                   </div>
-                  <div className="phone">
-                    <p>{phone}</p>
-                  </div>
-                </div>
-                <div className="end_pro">
-                  <p>{projectMan}</p>
-                </div>
-              </div>
-                )
+                );
               })}
-
             </div>
-
 
             <div
               className="project_details_sin"

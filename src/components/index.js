@@ -10,5 +10,6 @@ import AddPower from "./addPower/AddPower.jsx";
 import AddClient from "./addClient/AddClient.jsx";
 import AddMediator from "./addMediator/AddMediator.jsx";
 import UpdateUi from "./updateProjectUi/UpdateUi.jsx";
+import AddInvoices from "./addInvoices/AddInvoices.jsx";
 
-export {AddProject, UpdateUi,AddMediator, AddClient, AddPower, Sidebar, AddEmployees, Searchbar, Topbar, BreadCrumb, AboutUser, SingleBraedcrumb}
+export {AddProject, AddInvoices, UpdateUi,AddMediator, AddClient, AddPower, Sidebar, AddEmployees, Searchbar, Topbar, BreadCrumb, AboutUser, SingleBraedcrumb}
