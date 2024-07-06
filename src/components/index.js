@@ -12,11 +12,11 @@ import AddMediator from "./addMediator/AddMediator.jsx";
 import UpdateUi from "./updateProjectUi/UpdateUi.jsx";
 import Updateclientui from "./updateClient/Updateclientui.jsx";
 import UpdatemediatorUi from "./updateMediatorui/UpdatemediatorUi.JSX";
-
+import AddInvoices from "./addInvoices/AddInvoices.jsx"
 export {
     AddProject,Updateclientui ,UpdateUi,AddMediator,
      AddClient, AddPower, Sidebar, AddEmployees, Searchbar, 
      Topbar, BreadCrumb, AboutUser, SingleBraedcrumb,
-    UpdatemediatorUi
+     UpdatemediatorUi, AddInvoices
     
     }
