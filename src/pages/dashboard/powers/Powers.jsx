@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import  { useState } from "react";
 import {SingleBraedcrumb } from "../../../components";
 import { FaSearch } from "react-icons/fa";
@@ -60,9 +61,9 @@ const Powers = () => {
             {row.procedure}
           </button>
           <div className="dropdown-menu">
-          <Link className="dropdown-item" to="/updatePowers/123">عرض <BiSolidShow />
+          <Link className="dropdown-item" to="/powers/123">عرض <BiSolidShow />
           </Link>
-            <Link className="dropdown-item" to="/updatePowers/123">
+            <Link className="dropdown-item" to="/powers/123">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">
@@ -307,7 +308,7 @@ const Powers = () => {
                       name="date"
                       onChange={handleDate}
                       value={selectedDate}
-                      locale="ar"
+                    
                     />
                   </form>
                 </div>
