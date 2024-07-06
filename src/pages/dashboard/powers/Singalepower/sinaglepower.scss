@@ -1,0 +1,19 @@
+@import "../../../../components/variables/Variables.scss";
+@import "../../../../components/mixin/Mixin.scss";
+.sinagelpower{
+    .sinaglePermissions_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sinagleprmaion-box{
+        margin: $margin-top;
+        background-color: $black-1;
+        border-radius: $border-radius;
+        padding: $padding-15;
+        box-shadow: $shadow-2;
+        .emplyers{
+            margin-top: 2rem;
+        }
+    }
+}

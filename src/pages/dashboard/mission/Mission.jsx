@@ -1,7 +1,7 @@
 import { GiStabbedNote } from "react-icons/gi";
 import { SingleBraedcrumb } from "../../../components";
 import { FiPlus } from "react-icons/fi";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
@@ -152,7 +152,7 @@ const Mission = () => {
   <HiOutlineDotsHorizontal />
   </button>
   <div className="dropdown-menu">
-    <Link className="dropdown-item" to="#">عرض <BiSolidShow />
+    <Link className="dropdown-item" to="/reportDetails/123">عرض <BiSolidShow />
     </Link>
     <Link className="dropdown-item" to="#">تعديل <GrEdit />
     </Link>

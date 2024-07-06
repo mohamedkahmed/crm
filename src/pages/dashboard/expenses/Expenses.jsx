@@ -307,7 +307,7 @@ const Expenses = () => {
               <SingleBraedcrumb icon={<FaMoneyCheckDollar />} title="المصروفات" />
             </div>
             <div className="add-new">
-              <NavLink to="/addInvoices">
+              <NavLink to="#">
                 <FiPlus />
                 اضافة جديد
               </NavLink>

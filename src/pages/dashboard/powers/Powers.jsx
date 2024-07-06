@@ -63,7 +63,7 @@ const Powers = () => {
           <div className="dropdown-menu">
           <Link className="dropdown-item" to="/powers/123">عرض <BiSolidShow />
           </Link>
-            <Link className="dropdown-item" to="/powers/123">
+            <Link className="dropdown-item" to="/update-power/123">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">

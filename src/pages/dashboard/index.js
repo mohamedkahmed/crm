@@ -12,10 +12,12 @@ import SharedLayout from "./SharedLayout.jsx";
 import Client from "./client/Client.jsx";
 import Mediator from "./mediator/Mediator.jsx";
 import SingleProject from "./projects/SingleProject.jsx";
-import ReportDetails from "./reportDetails/ReportDetails.jsx";
-import UpdateProject from "./updateProject/UpdateProject.jsx";
-import Updateemployeer from "./updateemployer/Updateemployeer.jsx";
-import Updateclient from "./updateclient/Updateclient.jsx";
-import Updatemediator from "./updateMediator/Updatemediator.jsx";
-import UpdatePowers from "./updatePowers/UpdatePowers.jsx";
-export {Home,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+import ReportDetails from "./reports/reportDetails/ReportDetails.jsx";
+import UpdateProject from ".//projects/updateProject/UpdateProject.jsx";
+import Updateemployeer from "./employees/updateemployer/Updateemployeer.jsx";
+import Updateclient from "./client/updateclient/Updateclient.jsx";
+import Updatemediator from "./mediator/updateMediator/Updatemediator.jsx";
+import UpdatePowers from "./powers/updatePowers/UpdatePowers.jsx";
+import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
+import Singalepower from "./powers/Singalepower/Singalepower.jsx";
+export {Home,AddInvoices,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
