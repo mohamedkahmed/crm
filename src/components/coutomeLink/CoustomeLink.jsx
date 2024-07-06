@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 import "./link.scss"
 const CoustomeLink = ({url , text}) => {
   return (
-    <div className="add-new">
+    <div className="add-new-xxxxxx">
     {" "}
     <Link className='url' to={url}>
       <FiPlus />

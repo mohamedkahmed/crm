@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {SingleBraedcrumb } from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { MdLibraryAddCheck } from "react-icons/md";
 import { FiPlus } from "react-icons/fi";
 import employeesImage from "../../../assets/images/employees-user.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { BiSolidShow } from "react-icons/bi";
+import { GrEdit } from "react-icons/gr";
+import { MdDelete } from "react-icons/md";
 import PowersTabel from "./PowersTabel";
 import "./Powers.scss";
+import Modulefade from "./Modulefade";
+
 const Powers = () => {
   const columns = [
     {
@@ -49,6 +54,23 @@ const Powers = () => {
     {
       name: "اجراء",
       selector: (row) => row.procedure,
+      cell: (row) => (
+        <div className="dropdown">
+          <button type="button" data-toggle="dropdown" aria-expanded="false">
+            {row.procedure}
+          </button>
+          <div className="dropdown-menu">
+        <Link className="dropdown-item" to="/updatePowers/123">عرض <BiSolidShow />
+          </Link>
+            <Link className="dropdown-item" to="/updatePowers/123">
+              تعديل <GrEdit />
+            </Link>
+            <Link className="dropdown-item" style={{ color: "red" }} href="#">
+              حذف <MdDelete style={{ color: "red" }} />
+            </Link>
+          </div>
+        </div>
+      ),
     },
   ];
   const data = [
@@ -222,7 +244,7 @@ const Powers = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const handleFilter = (event) => {
     const newData = data.filter((row) => {
-      return row.name.text
+      return row.validity
         .toLowerCase()
         .includes(event.target.value.toLowerCase());
     });
@@ -248,13 +270,16 @@ const Powers = () => {
               />
             </div>
             <div className="add-new">
-              <NavLink to="/addPower">
-                <FiPlus />
-                اضافة جديد
-              </NavLink>
-            </div>
+      
+               <button data-toggle="modal" data-target="#staticBackdrop">
+              <FiPlus />
+              اضافة صلاحيه
+            </button>
+           
+            </div> 
+           
           </div>
-
+          <Modulefade /> 
           {/* powers table */}
 
           <div className="powers_box">

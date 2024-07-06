@@ -18,8 +18,20 @@ import "./Sidebar.scss";
 import { NavLink } from "react-router-dom";
 const Sidebar = () => {
   const [showDropdown, setShowDrobdown] = useState(false);
+  const [showDropdown2, setShowDrobdown2] = useState(false);
   const location = useLocation();
   const pathName = location.pathname;
+  const closeClick = (() => {
+    if (showDropdown === true){
+      setShowDrobdown(false)
+    } else if (showDropdown2 === true) {
+      setShowDrobdown2(false)
+    } else {
+      setShowDrobdown2(false)
+      setShowDrobdown(false)
+    }
+    console.log(showDropdown)
+  })
   return (
     <section className="sidebar">
       <div className="logo">
@@ -28,36 +40,36 @@ const Sidebar = () => {
       <div className="nav-links">
         <ul>
           <li>
-            <NavLink to="/">
+            <NavLink onClick={closeClick} to="/">
               <FaHome /> <p>الرئيسية</p>{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/projects" className={pathName === "/AddProject" ? "active" : null}>
+            <NavLink onClick={closeClick} to="/projects" className={pathName === "/AddProject" || pathName === "/SingleProject/1" ? "active" : null}>
               <PiBuildingsFill /> <p>المشاريع</p>{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/mission">
+            <NavLink onClick={closeClick} to="/mission">
               {" "}
               <GiStabbedNote /> <p>المهام</p>{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/reports">
+            <NavLink onClick={closeClick} to="/reports" className={ pathName === "/reportDetails/123" ? "active" : null}>
               {" "}
               <TbReportSearch /> <p>التقارير</p>{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/invoices">
+            <NavLink onClick={closeClick} to="/invoices" className={pathName === "/addInvoices" ? "active" : null}>
               {" "}
               <FaFileInvoice />
               <p>الفواتير</p>{" "}
             </NavLink>
           </li>
           <li>
-            <NavLink to="/calendar" className={pathName === "/addCalendar" ? "active" : null}>
+            <NavLink onClick={closeClick} to="/calendar" className={pathName === "/addCalendar" ? "active" : null}>
               {" "}
               <FaCalendarAlt />
               <p>التقويم</p>{" "}
@@ -65,14 +77,14 @@ const Sidebar = () => {
           </li>
           <li>
             <NavLink
-              className={pathName === "/mediator" ? "active" : ""}
+            onClick={() => setShowDrobdown(!showDropdown)}
+              className={pathName === "/mediator" || pathName === "/addClient" || pathName === "/addMediator" ? "active" : ""}
               to="/client"
               style={{
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
               }}
-              onClick={() => setShowDrobdown(!showDropdown)}
             >
               {" "}
               <div
@@ -88,14 +100,14 @@ const Sidebar = () => {
                 {" "}
                 <p>- عميل</p>{" "}
               </NavLink>
-              <NavLink to="/mediator">
+              <NavLink to="/mediator" className={pathName === "/addMediator" ? "active" : null}>
                 {" "}
                 <p>- وسيط</p>{" "}
               </NavLink>
             </div>
           </li>
           <li>
-            <NavLink
+            <NavLink onClick={closeClick}
               to="/employees"
               className={pathName === "/addemployees" ? "active" : null}
             >
@@ -105,25 +117,37 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/administration">
-              {" "}
-              <IoMdSettings />
-              <p>الادارة</p>{" "}
+
+            <NavLink
+              className={pathName === "/expenses" || pathName === "/updatePowers/123" || pathName === "/addPower" ? "active" : ""}
+              to="/powers"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+              onClick={() => setShowDrobdown2(!showDropdown2)}
+            >
+              <div
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+                
+              >
+                <FaUsers />
+                <p>الادارة</p>{" "}
+              </div>
+              <div>{showDropdown2 ? <FaChevronDown /> : <FaAngleLeft />}</div>
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="/powers" className={pathName === "/addPower" ? "active" : null}>
+            <div className={showDropdown2 ? "show-dropdown" : "drobdown-menu"}>
+            <NavLink to="/powers" className={pathName === "/updatePowers/123" || pathName === "/addPower" ? "active" : null}>
               {" "}
               <MdLibraryAddCheck />
               <p>الصلاحيات</p>{" "}
             </NavLink>
-          </li>
-          <li>
-            <NavLink to="/expenses">
-              {" "}
+            <NavLink  to="/expenses">
               <FaMoneyCheckDollar />
               <p>المصروفات</p>{" "}
             </NavLink>
+            </div>
           </li>
         </ul>
       </div>

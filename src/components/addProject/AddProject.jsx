@@ -56,7 +56,14 @@ const onSubmit = (e) => {
                 <p>ادخل تفاصيل العقار</p>
               </div>
             </div>
-          
+            <div className="Project_completion_stage">
+              <div className="icon">
+                <FaUsers />              </div>
+              <div className="text">
+                <p>العملاء</p>
+                <p>اخيار العميل</p>
+              </div>
+            </div>
             <div className="Project_completion_stage">
               <div className="icon">
                 <IoMdLink />
