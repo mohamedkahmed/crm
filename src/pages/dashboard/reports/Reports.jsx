@@ -49,7 +49,7 @@ const Reports = () => {
             <Link className="dropdown-item" to="/reportDetails/123">
               عرض <BiSolidShow />
             </Link>
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/update-report/34">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">

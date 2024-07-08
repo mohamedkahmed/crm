@@ -19,7 +19,7 @@ const ReportDetails = () => {
             />
           </div>
           <div className="add-new">
-            <NavLink to="/projects">
+            <NavLink to="/reports">
             <FaArrowRightLong />
               عوده
             </NavLink>

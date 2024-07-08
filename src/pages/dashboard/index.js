@@ -20,4 +20,6 @@ import Updatemediator from "./mediator/updateMediator/Updatemediator.jsx";
 import UpdatePowers from "./powers/updatePowers/UpdatePowers.jsx";
 import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
 import Singalepower from "./powers/Singalepower/Singalepower.jsx";
-export {Home,AddInvoices,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+import UpdateReports from "./reports/updateReports/UpdateReports.jsx";
+import Singaleinvoice from "./invoices/singaleInvoices/Singaleinvoice.jsx";
+export {Home,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}

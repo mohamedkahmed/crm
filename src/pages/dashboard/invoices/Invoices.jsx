@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {SingleBraedcrumb} from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
@@ -69,7 +69,7 @@ const Invoices = () => {
             {row.procedure}
           </button>
           <div className="dropdown-menu">
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/invoices/123">
               عرض <BiSolidShow />
             </Link>
             <Link className="dropdown-item" to="#">

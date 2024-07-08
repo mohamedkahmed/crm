@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./pages/error/Error";
-import {Home,AddInvoices,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
+import {Home,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
 import { AddEmployees ,AddProject, AddPower, AddClient, AddMediator } from "./components";
 import Login from "./pages/auth/login/Login";
 import ForgetPass from "./pages/auth/forgetPass/forgetPass";
@@ -36,6 +36,8 @@ const App = () => {
 <Route path="update-power/:id" element={<UpdatePowers/>}/>
 <Route path="addInvoices" element={<AddInvoices/>}/>
 <Route path="powers/:id" element={<Singalepower/>}/>
+<Route path="update-report/:id" element={<UpdateReports/>}/>
+<Route path="invoices/:id" element={<Singaleinvoice/>}/>
 </Route>
      <Route path="*" element={<Error/>}/>
      <Route path="login" element={<Login/>}/>
