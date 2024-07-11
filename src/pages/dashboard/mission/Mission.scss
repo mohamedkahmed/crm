@@ -74,14 +74,16 @@
                   display: flex;
                   flex-wrap: wrap;
                   align-items: center;
+                  justify-content: start;
                   gap: 10px;
                   padding-top: 8px;
                   font-size: $font-14;
                   div {
                     display: flex;
+                    align-items: center;
                     gap: 4px;
-                    input {
-                      transform: translateY(5px);
+                    label {
+                      margin: 0
                     }
                   }
                 }
@@ -163,6 +165,83 @@
                   }
                   
                 }
+                .modal {
+                  z-index: 99999999999;
+                }
+                  .modal-dialog {
+                    pointer-events: inherit;
+                    z-index: 99999999999;
+                    button {
+                      color: $black-8;
+                      border: transparent;
+                      background-color: $black-5;
+                      padding: 6px 16px;
+                      font-size: $font-14;
+                      font-weight: 600;
+                      border-radius: $border-radius;
+                      border: 1px solid $black-5;
+                      transition: $transition;
+                      &:hover {
+                        background-color: $blue-6;
+                        color: white;
+                        border: 1px solid $blue-6;
+                      }
+                    }
+                    .modal-content {
+                      padding: 10px;
+                      .demo_txt {
+                        p {
+                          font-size: 12px ;
+                          max-width: 80%;
+                          padding: 10px 0;
+                        }
+                      }
+                      .modal-dialog-scrollable {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        font-size: $font-14;
+                        label {
+                          margin-top: 10px;
+                          font-weight: 600;
+                          color: $black-13;
+                        }
+                        textarea {
+                          font-size: $font-14;
+                          outline: none;
+                          border-color: $black-5;
+                          border-radius: $border-radius;
+                          height: 80px;
+                          padding: 10px;
+                        }
+                        .form_control {
+                          width: 100%;
+                          margin: 10px 0 20px;
+                          outline: none;
+                          border-color: $black-5;
+                          border-radius: $border-radius;
+                          padding: 2px 6px;
+                      }
+                      .checks_boxs {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: start;
+                        gap: 10px;
+                        padding-top: 8px;
+                        font-size: $font-14;
+                        div {
+                          display: flex;
+                          align-items: center;
+                          gap: 4px;
+                          label {
+                            margin: 0
+                          }
+                        }
+                      }
+                      }
+                    }
+                  }
             }
             .client_content {
                 display: flex;

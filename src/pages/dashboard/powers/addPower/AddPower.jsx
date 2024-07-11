@@ -1,8 +1,12 @@
-/* eslint-disable no-unused-vars */
-import PowersTabel from "./PowersTabel"
+import { HiArrowLongRight } from "react-icons/hi2";
+import { NavLink, useNavigate } from "react-router-dom";
+import { MdLibraryAddCheck } from "react-icons/md";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
-import employeesImage from "../../../assets/images/employees-user.png";
-const Modulefade = () => {
+import { PiPencilLineThin } from "react-icons/pi";
+import PowersTabel from "../PowersTabel"
+import { SingleBraedcrumb } from "../../../../components";
+import "./AddPower.scss"
+const AddPower = () => {
   const columns = [
     {
       name: "صلاحيه",
@@ -96,63 +100,69 @@ const Modulefade = () => {
     }
   ];
   return (
-    <div
-              className="modal fade"
-              id="staticBackdrop"
-              data-keyboard="false"
-              tabIndex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div className="modal-dialog">
-                <div className="modal-content">
-                  <form action="">
+    <section className="add-power-section">
+    <div className="container">
+      <div className="add-power-top">
+        <div className="m-b-c">
+          <SingleBraedcrumb icon={<MdLibraryAddCheck />} title="اضافه صلاحية" />
+        </div>
+        <div className="add-new">
+          <NavLink to="/powers">
+            <HiArrowLongRight />
+            عودة
+          </NavLink>
+        </div>
+      </div>
+
+      <div className="add_permissions_box">
+      <form action="">
                     <div className="modal-header">
                       <h5 className="modal-title" id="staticBackdropLabel">
-                        اضافه صلاحيه
+                        اضافه صلاحية
                       </h5>
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
-                        <span aria-hidden="true">&times;</span>
-                      </button>
                     </div>
 
                
 
-                    <div className="project_price">
-                    <label htmlFor="exampleFormControlSelect10">  اسم الصلاحيه*</label>
-                    <input type="text" name="estate-measure" id="exampleFormControlSelect10" />
+<div className="main_parent_in">
+<div className="permission_name">
+                    <div className="main_input">
+                    <label htmlFor="permissionName">اسم الصلاحية*</label>
+                    <div>
+                    <input type="text" name='text' id='permissionName' required />
+                    <PiPencilLineThin />
+
                     </div>
-                    <div className="project_price">
-                        <label htmlFor="exampleFormControlSelect10"> تفاصيل الصلاحيه*</label>
-                        <input type="text" name="estate-measure" id="exampleFormControlSelect10" />
                     </div>
+                    <div className="main_input">
+                    <label htmlFor="permissionName">تفاصيل الصلاحية*</label>
+                    <div>
+                    <input type="text" name='text' id='permissionName' required />
+                    <PiPencilLineThin />
+
+                    </div>
+                    </div>
+                    </div>
+</div>
                 
                 <PowersTabel data={data}  columns={columns}/>
 
                      
                   
-                    <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-secondary"
-                        data-dismiss="modal"
-                      >
-                        الغاء
-                      </button>
-                      <button type="button" className="btn btn-primary">
-                        حفظ
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                <div className="btn-down">
+                <NavLink className="cancel" to="/powers">
+                  الغاء
+                </NavLink>
+                <button className="save" type="submit">
+                  حفظ
+                </button>
               </div>
-            </div>
+                  </form>
+      </div>
+
+    </div>
+  </section>
   )
 }
 
-export default Modulefade
+export default AddPower

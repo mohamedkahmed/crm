@@ -12,7 +12,7 @@ import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
 import PowersTabel from "./PowersTabel";
 import "./Powers.scss";
-import Modulefade from "./Modulefade";
+
 
 const Powers = () => {
   const columns = [
@@ -272,15 +272,15 @@ const Powers = () => {
             </div>
             <div className="add-new">
       
-               <button data-toggle="modal" data-target="#staticBackdrop">
+               <NavLink to="/addPower">
               <FiPlus />
-              اضافة صلاحيه
-            </button>
+              اضافة صلاحية
+            </NavLink>
            
             </div> 
            
           </div>
-          <Modulefade /> 
+
           {/* powers table */}
 
           <div className="powers_box">

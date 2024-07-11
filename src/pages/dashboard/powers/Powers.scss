@@ -42,7 +42,7 @@
         align-items: center;
         justify-content: space-between;
         .add-new {
-            button {
+            a {
                 @include Btn_style;
             }
         }

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
-
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { all_tasks } from "../../../assets/Data/Data";
 import "./Mission.scss";
@@ -22,6 +21,7 @@ const Mission = () => {
               <FiPlus />
               اضافة مهمه
             </button>
+               {/* this is pop up */}            
             <div
               className="modal fade"
               id="staticBackdrop"
@@ -102,23 +102,6 @@ const Mission = () => {
                           />
                           <label htmlFor="vehicle2">تعديل بيانات المشروع</label>
                         </div>
-                        <div>
-                          <input
-                            type="checkbox"
-                            name="vehicle3"
-                            value="تعديل تصميم المشروع"
-                          />
-                          <label htmlFor="vehicle3">تعديل تصميم المشروع</label>
-                        </div>
-                        <div>
-                          {" "}
-                          <input
-                            type="checkbox"
-                            name="vehicle4"
-                            value="تعديل مرفقات المشروع"
-                          />
-                          <label htmlFor="vehicle4">تعديل مرفقات المشروع</label>
-                        </div>
                       </div>
                     </div>
                     <div className="modal-footer">
@@ -154,12 +137,111 @@ const Mission = () => {
   <div className="dropdown-menu">
     <Link className="dropdown-item" to="/reportDetails/123">عرض <BiSolidShow />
     </Link>
-    <Link className="dropdown-item" to="#">تعديل <GrEdit />
+    <Link className="dropdown-item" data-toggle="modal" data-target="#staticBackdropEdit" to="#">تعديل <GrEdit />
     </Link>
     <Link className="dropdown-item" style={{color: "red"}} href="#">حذف <MdDelete style={{color: "red"}} />
     </Link>
   </div>
 </div>
+{/* this is pop up for edit */}
+<div
+              className="modal fade"
+              id="staticBackdropEdit"
+              data-keyboard="false"
+              tabIndex="-1"
+              aria-labelledby="staticBackdropLabel2"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <form action="">
+                    <div className="modal-header">
+                      <h5 className="modal-title" id="staticBackdropLabel2">
+                        تعديل المهمه
+                      </h5>
+                      <button
+                        type="button"
+                        className="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div className="demo_txt">
+                      <p>
+                        {" "}
+                        مرحباً هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                        المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                      </p>
+                    </div>
+                    <div className="modal-dialog modal-dialog-scrollable">
+                      <label htmlFor="exampleFormControlSelect1">
+                        اختر الموظف
+                      </label>
+                      <select
+                        className="form_control"
+                        id="exampleFormControlSelect1"
+                      >
+                        <option value="#">محمد علي</option>
+                        <option value="#">محمد علي</option>
+                        <option value="#">محمد علي</option>
+                      </select>
+                      <label htmlFor="exampleFormControlSelect2">
+                        نوع المهمه
+                      </label>
+                      <select
+                        className="form_control"
+                        id="exampleFormControlSelect2"
+                      >
+                        <option value="#">اشراف علي المشروع</option>
+                        <option value="#">اشراف علي المشروع</option>
+                        <option value="#">اشراف علي المشروع</option>
+                      </select>
+                      <label htmlFor="exampleFormControlSelect3">
+                        اضافه ملاحظات
+                      </label>
+                      <textarea
+                        name="text"
+                        id="exampleFormControlSelect3"
+                      ></textarea>
+                      <div className="checks_boxs">
+                        <div>
+                          {" "}
+                          <input
+                            type="checkbox"
+                            name="vehicle1"
+                            value="عرض بيانات المشروع"
+                          />
+                          <label htmlFor="vehicle1">عرض بيانات المشروع</label>
+                        </div>
+                        <div>
+                          {" "}
+                          <input
+                            type="checkbox"
+                            name="vehicle2"
+                            value="تعديل بيانات المشروع"
+                          />
+                          <label htmlFor="vehicle2">تعديل بيانات المشروع</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="modal-footer">
+                      <button
+                        type="button"
+                        className="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        الغاء
+                      </button>
+                      <button type="button" className="btn btn-primary">
+                        حفظ
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
                 </div>
                 <div className="client_content">
                   <div className="img_name">

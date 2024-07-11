@@ -1,8 +1,8 @@
 @import "../../../../components/variables/Variables.scss";
 
-.add-invoices {
+.update-invoices {
     overflow: hidden;
-    .add-invoices-top {
+    .update-invoices-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -32,7 +32,7 @@
         }
     }
 
-    .add-invoices-data {
+    .update-invoices-data {
         margin: $margin-top;
         background-color: $black-1;
         border-radius: $border-radius;
@@ -151,7 +151,7 @@
             .cancel {
                 border: none;
                 color: $black-8;
-                background: $black-4;
+                background: none;
             }
             .save {
                 &:hover {

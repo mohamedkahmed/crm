@@ -86,7 +86,7 @@ const Sidebar = () => {
           <li>
             <NavLink
             onClick={() => setShowDrobdown(!showDropdown)}
-              className={pathName === "/mediator" || pathName === "/addClient" || pathName === "/addMediator" ? "active" : ""}
+              className={pathName === "/mediator" || pathName === "/addClient" || pathName === "/addMediator" || pathName === "/update-medtiator/56" || pathName === "/update-client/123"  ? "active" : ""}
               to="/client"
               style={{
                 display: "flex",
@@ -104,11 +104,11 @@ const Sidebar = () => {
               <div>{showDropdown ? <FaChevronDown /> : <FaAngleLeft />}</div>
             </NavLink>
             <div className={showDropdown ? "show-dropdown" : "drobdown-menu"}>
-              <NavLink to="/client" className={pathName === "/addClient" ? "active" : null}>
+              <NavLink to="/client" className={pathName === "/addClient" || pathName === "/update-client/123" ? "active" : null}>
                 {" "}
                 <p>- عميل</p>{" "}
               </NavLink>
-              <NavLink to="/mediator" className={pathName === "/addMediator" ? "active" : null}>
+              <NavLink to="/mediator" className={pathName === "/addMediator" || pathName === "/update-medtiator/56" ? "active" : null}>
                 {" "}
                 <p>- وسيط</p>{" "}
               </NavLink>
@@ -127,7 +127,7 @@ const Sidebar = () => {
           <li>
 
             <NavLink
-              className={pathName === "/expenses" || pathName === "/updatePowers/123" || pathName === "/addPower" ? "active" : ""}
+              className={pathName === "/expenses" || pathName === "/update-power/123" || pathName === "/addPower" || pathName === "/addExpenses"  ? "active" : ""}
               to="/powers"
               style={{
                 display: "flex",
@@ -146,12 +146,12 @@ const Sidebar = () => {
               <div>{showDropdown2 ? <FaChevronDown /> : <FaAngleLeft />}</div>
             </NavLink>
             <div className={showDropdown2 ? "show-dropdown" : "drobdown-menu"}>
-            <NavLink to="/powers" className={pathName === "/updatePowers/123" || pathName === "/addPower" ? "active" : null}>
+            <NavLink to="/powers" className={pathName === "/update-power/123" || pathName === "/addPower" ? "active" : null}>
               {" "}
               <MdLibraryAddCheck />
               <p>الصلاحيات</p>{" "}
             </NavLink>
-            <NavLink  to="/expenses">
+            <NavLink  to="/expenses" className={pathName === "/addExpenses" ? "active" : null}>
               <FaMoneyCheckDollar />
               <p>المصروفات</p>{" "}
             </NavLink>

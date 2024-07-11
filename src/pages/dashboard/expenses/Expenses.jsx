@@ -59,7 +59,11 @@ const Expenses = () => {
             <Link className="dropdown-item" to="/expenses/234">
               عرض <BiSolidShow />
             </Link>
+<<<<<<< HEAD
             <Link className="dropdown-item" to="/update-expenses/123">
+=======
+            <Link className="dropdown-item" to="/updateExp/123">
+>>>>>>> master
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">
@@ -307,7 +311,11 @@ const Expenses = () => {
               <SingleBraedcrumb icon={<FaMoneyCheckDollar />} title="المصروفات" />
             </div>
             <div className="add-new">
+<<<<<<< HEAD
               <NavLink to="/Addexpenses">
+=======
+              <NavLink to="/addExpenses">
+>>>>>>> master
                 <FiPlus />
                 اضافة جديد
               </NavLink>

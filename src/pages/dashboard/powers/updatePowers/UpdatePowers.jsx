@@ -3,10 +3,103 @@ import { SingleBraedcrumb } from '../../../../components'
 import { MdLibraryAddCheck, MdOutlineDateRange  } from 'react-icons/md'
 import { FiPlus } from 'react-icons/fi'
 import { PiPencilLineThin } from "react-icons/pi";
-
-import { NavLink } from 'react-router-dom'
+import PowersUpdateTabel  from "./PowersUpdateTabel"
+import { NavLink, useNavigate } from "react-router-dom";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import "./UpdatePowers.scss";
 const UpdatePowers = () => {
+  const columns = [
+    {
+      name: "صلاحيه",
+      selector: (row) => row.validity,
+    },
+    {
+      name: "مشاهده",
+      selector: (row) => row.validity,
+      cell: (row) => {
+        return <input type="checkbox" />;
+      },
+    },
+    {
+      name: " إضافه ",
+      selector: (row) => row.persons,
+      cell: () => {
+        return <input type="checkbox" />;
+      },
+    },
+    {
+      name: "تعديل",
+      selector: (row) => row.mission,
+      cell: () => {
+        return <input type="checkbox" />;
+      },
+    },
+    {
+      name: " حذف",
+      cell: () => {
+        return <input type="checkbox" />;
+      },
+    },
+  ];
+  const data = [
+    {
+      id: 1,
+      validity: "الرئيسيه ",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 2,
+      validity: "المشاريع",
+   
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 3,
+      validity: "التقارير",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 4,
+      validity: "الفواتير",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 5,
+      validity: "المهام",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 6,
+      validity: "العملاء",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 7,
+      validity: "الموظفين",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    },
+    {
+      id: 8,
+      validity: "الاداره",
+      mission: "اسم الصلاحية",
+      date: "2024-05-28",
+      procedure: <HiOutlineDotsHorizontal />,
+    }
+  ];
   return (
     <section className='updatePermissions_section_wrapper'>
       <div className="container">
@@ -20,7 +113,7 @@ const UpdatePowers = () => {
             <div className="add-new">
               <NavLink to="/addPower">
                 <FiPlus />
-                اضافة جديد
+                اضافة صلاحية
               </NavLink>
             </div>
           </div>
@@ -53,8 +146,9 @@ const UpdatePowers = () => {
                     </div>
                     </div>
                     </div>
+                    <PowersUpdateTabel    data={data}  columns={columns}/>
                     <div className="btn-down">
-                <NavLink className="cancel" to="/invoices">
+                <NavLink className="cancel" to="/powers">
                   الغاء
                 </NavLink>
                 <button className="save" type="submit">

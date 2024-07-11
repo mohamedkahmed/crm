@@ -33,7 +33,7 @@ console.log(data);
         <div className="container">
           <div className="add-client-top">
             <div className="m-b-c">
-              <SingleBraedcrumb icon={<FaUsers />} title="العملاء" />
+              <SingleBraedcrumb icon={<FaUsers />} title="الوسطاء" />
             </div>
             <div className="add-new">
               {" "}

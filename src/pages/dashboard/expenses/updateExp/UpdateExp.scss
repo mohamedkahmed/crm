@@ -1,9 +1,8 @@
 @import "../../../../components/variables/Variables.scss";
 @import "../../../../components/mixin/Mixin.scss";
 
-
-.addExpenses_section_wrapper {
-    .addExp_top {
+.updateExp_section_wrapper {
+    .updateExp_top {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -13,7 +12,7 @@
             }
         }
 }
-.addExp_box {
+.updateExp_box {
     margin: $margin-top;
     background-color: $black-1;
     border-radius: $border-radius;
@@ -23,6 +22,14 @@
         font-size: $font-16;
         font-weight: 600;
         margin: 10px 0 30px;
+        span {
+            width: 10px;
+            height: 10px;
+            background-color: $orange-6;
+            display: inline-block;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
     }
     form {
         .main-inputs {
