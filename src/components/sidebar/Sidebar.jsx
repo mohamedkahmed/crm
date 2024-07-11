@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import logo from "../../assets/images/logo.png";
 import { FaHome } from "react-icons/fa";
 import { PiBuildingsFill } from "react-icons/pi";
+import { MdMeetingRoom } from "react-icons/md";
 import { GiStabbedNote } from "react-icons/gi";
 import { TbReportSearch } from "react-icons/tb";
 import { FaFileInvoice } from "react-icons/fa";
@@ -75,6 +76,13 @@ const Sidebar = () => {
               <p>التقويم</p>{" "}
             </NavLink>
           </li>
+          <li>
+          <NavLink onClick={closeClick} to="/meeting" className={pathName === "/addmeeting" ? "active" : null}>
+            {" "}
+            <MdMeetingRoom />
+            <p>الإجتماعات</p>{" "}
+          </NavLink>
+        </li>
           <li>
             <NavLink
             onClick={() => setShowDrobdown(!showDropdown)}

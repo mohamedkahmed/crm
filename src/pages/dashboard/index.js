@@ -22,4 +22,10 @@ import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
 import Singalepower from "./powers/Singalepower/Singalepower.jsx";
 import UpdateReports from "./reports/updateReports/UpdateReports.jsx";
 import Singaleinvoice from "./invoices/singaleInvoices/Singaleinvoice.jsx";
-export {Home,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+import Addexpenses from "./expenses/addExpenses/Addexpenses.jsx";
+import Updateexpenses from "./expenses/updateExpenses/Updateexpenses.jsx";
+import Singalexpenses from "./expenses/sinagleExpenses/Singalexpenses.jsx"
+import Meeting from "./meeting/Meeting.jsx";
+import Singalemeeting from "./meeting/singaleMeeting/Singalemeeting.jsx";
+import Addmeeting from "./meeting/addMeeting/Addmeeting.jsx";
+export {Home,Addexpenses,Meeting ,Addmeeting,Singalemeeting,Singalexpenses,Updateexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}

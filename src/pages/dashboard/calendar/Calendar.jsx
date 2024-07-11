@@ -7,6 +7,10 @@ import allLocales from '@fullcalendar/core/locales-all'
 import SingleBraedcrumb from "../../../components/singlebraedcrumb/SingleBraedcrumb"
 import "./Calendar.scss";
 const Calendar = () => {
+  const handeleventclik = (event) => {
+const targetevent = event.event.id
+console.log(targetevent);
+  }
 
   return (
     <>
@@ -28,13 +32,14 @@ const Calendar = () => {
         }}
         height={"90vh"}
         events={[
-            { title: 'مشروع رقم 1', date: '2024-06-11' },
-            { title: 'مشروع رقم 2', date: '2024-06-04' },
-            { title: 'مشروع رقم 3', date: '2024-06-02' }
+            { id:"01" ,title: 'مشروع رقم hgklop', date: '2024-07-11'  , desc:"تفاصيل المشروع انه تم الاتفاق على ان يكون السعر قابل للتفاوض وليس هناك اى دليل الى اقل من ذللك"},
+            {id:"02", title: 'مشروع رقم 2', date: '2024-06-04'  , desc:"تفاصيل المشروع انه تم الاتفاق على ان يكون السعر قابل للتفاوض وليس هناك اى دليل الى اقل من ذللك"},
+            {id:"03" , title: 'مشروع رقم 3', date: '2024-06-02' , desc:"تفاصيل المشروع انه تم الاتفاق على ان يكون السعر قابل للتفاوض وليس هناك اى دليل الى اقل من ذللك" }
           ]}
           locales={allLocales}
            locale={'ar'}
-        
+           eventClassNames="my-event" 
+           eventClick={handeleventclik}
       />
           </div>
         </div>
