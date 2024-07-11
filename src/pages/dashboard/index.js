@@ -20,9 +20,11 @@ import Updatemediator from "./mediator/updateMediator/Updatemediator.jsx";
 import UpdatePowers from "./powers/updatePowers/UpdatePowers.jsx";
 import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
 import Singalepower from "./powers/Singalepower/Singalepower.jsx";
-import UpdateInvoices from "./invoices/updateInvoices/UpdateInvoices.jsx";
-import AddPower from "./powers/addPower/AddPower.jsx";
+import UpdateReports from "./reports/updateReports/UpdateReports.jsx";
+import Singaleinvoice from "./invoices/singaleInvoices/Singaleinvoice.jsx";
+import AddPower from "./powers/addPower/AddPower.jsx"
 import AddExpenses from "./expenses/addExpenses/AddExpenses.jsx";
+import UpdateInvoices from "./invoices/updateInvoices/UpdateInvoices.jsx";
 import UpdateExp from "./expenses/updateExp/UpdateExp.jsx";
 
-export {Home, UpdateExp, AddExpenses, UpdateInvoices,AddPower,AddInvoices,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+export {Home, UpdateExp, UpdateInvoices, AddExpenses, AddPower ,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
