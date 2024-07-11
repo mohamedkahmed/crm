@@ -1,0 +1,152 @@
+@import "../../../../components/variables/Variables.scss";
+@import "../../../../components/mixin/Mixin.scss";
+
+.updateExp_section_wrapper {
+    .updateExp_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .add-new {
+            a {
+                @include Btn_style;
+            }
+        }
+}
+.updateExp_box {
+    margin: $margin-top;
+    background-color: $black-1;
+    border-radius: $border-radius;
+    padding: $padding-15;
+    box-shadow: $shadow-2;
+    .add-text {
+        font-size: $font-16;
+        font-weight: 600;
+        margin: 10px 0 30px;
+        span {
+            width: 10px;
+            height: 10px;
+            background-color: $orange-6;
+            display: inline-block;
+            border-radius: 50%;
+            margin-left: 8px;
+        }
+    }
+    form {
+        .main-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            .chi-in {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                gap: 20px;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    width: 100%;
+                    label {
+                        margin-bottom: 5px;
+                        font-size: $font-14;
+                        font-weight: 600;
+                        color: $black-8;
+                    }
+                    input, 
+                    select {
+                        height: 40px;
+                        background-color: $black-1;
+                        width: 100%;
+                        outline: none;
+                        padding: 0 20px;
+                        border-radius: $border-radius;
+                        border: 1px solid $black-5;
+                            font-size: $font-14;
+                    }
+                    span {
+                        color: $black-6;
+                    }
+                }
+            }
+            .add_nots {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                     width: 100%;
+                    label {
+                        margin-bottom: 5px;
+                        font-size: $font-14;
+                        font-weight: 600;
+                        color: $black-8;
+                    }
+                    textarea
+                        {
+                        height: 100px;
+                        background-color: $black-1;
+                        width: 100%;
+                        outline: none;
+                        padding:20px;
+                        border-radius: $border-radius;
+                        border: 1px solid $black-5;
+                            font-size: $font-14;
+                    }
+                    span {
+                        color: $black-6;
+                    }
+                }
+            }
+        }
+    }
+    .btn-down {
+        display: flex;
+        width: 100%;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: end;
+        gap: 15px;
+        a,
+        button
+        {
+            &:hover {
+                background-color: $blue-6;
+                    color: $black-1 ;
+                svg {
+                    color: $black-1;
+                }
+            }
+            padding: 6px 25px;
+            border: 1px solid $blue-6;
+            border-radius: $border-radius;
+            font-size: $font-14;
+            transition: $transition;
+            color: $blue-6;
+            font-size: $font-14;
+            background-color: $blue-6;
+            color: $black-1;
+            svg {
+                transition: $transition;
+                color: $blue-6;
+                margin-left: 5px;
+                margin-bottom: 3px;
+            }
+        }
+        .cancel {
+            border: none;
+            color: $black-8;
+            background: $black-4;
+        }
+        .save {
+            &:hover {
+                background-color: $blue-4;
+                border: 1px solid $blue-4;
+            }
+        }
+    }
+}
+}

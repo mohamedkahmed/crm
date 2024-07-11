@@ -72,7 +72,7 @@ const Invoices = () => {
             <Link className="dropdown-item" to="#">
               عرض <BiSolidShow />
             </Link>
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/updateInvoices/123">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">

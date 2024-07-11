@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+/* eslint-disable no-unused-vars */
+import  { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { SingleBraedcrumb } from "../../../components";
 import { PiBuildingsFill } from "react-icons/pi";

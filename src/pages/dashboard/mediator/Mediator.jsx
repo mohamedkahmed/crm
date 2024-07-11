@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import {SingleBraedcrumb} from "../../../components";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
@@ -55,7 +55,7 @@ const Mediator = () => {
             <Link className="dropdown-item" to="#">
               عرض <BiSolidShow />
             </Link>
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/update-medtiator/56">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">

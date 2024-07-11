@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { SingleBraedcrumb } from "../../../components";
 import { PiBuildingsFill } from "react-icons/pi";
@@ -97,7 +98,7 @@ const projects = () => {
                   <Link className="btn_deta" to={`/projects/${id}`}>
                     تفاصيل
                   </Link>
-                  <Link style={{backgroundColor:"#898989"}} className="btn_deta" to={``}>
+                  <Link style={{backgroundColor:"#898989"}} className="btn_deta" to={`/update-project/67`}>
                     تعديل
                   </Link>
                   <Link style={{backgroundColor:"#9f0000"}} className="btn_deta" to={``}>
