@@ -32,5 +32,6 @@ import AddPower from "./powers/addPower/AddPower.jsx"
 import AddExpenses from "./expenses/addExpenses/AddExpenses.jsx";
 import UpdateInvoices from "./invoices/updateInvoices/UpdateInvoices.jsx";
 import UpdateExp from "./expenses/updateExp/UpdateExp.jsx";
+import Allmeeting from "./meeting/allmeeting/Allmeeting.jsx";
 
-export {Home,Meeting , AddExpenses,AddPower ,UpdateInvoices,UpdateExp,Addmeeting,Singalemeeting,Singalexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+export {Home,Meeting , Allmeeting ,AddExpenses,AddPower ,UpdateInvoices,UpdateExp,Addmeeting,Singalemeeting,Singalexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}

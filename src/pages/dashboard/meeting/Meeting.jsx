@@ -61,7 +61,10 @@ const Meeting = () => {
         <div className="m-b-c">
           <SingleBraedcrumb icon={<MdMeetingRoom />} title="الإجتماعات" />
         </div>
+        <div className="btn-container">
         <CoustomeLink url={"/addMeeting"} text={"إضافه إجتماع"} />
+        <CoustomeLink url={"/all-meeting"} text={" جميع الإجتماعات"} />
+        </div>
       </div>
       <div className="calendar_box">
               <Fullcalendar
