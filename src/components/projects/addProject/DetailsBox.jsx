@@ -146,7 +146,7 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
              
             </div>
             {
-              images_video.length ?  <Uploadeproject images ={images_video} setImages ={setimages_video} docs={docs} setDocs={setDocs} /> :null
+              images_video.length > 0  || docs.length > 0 ?  <Uploadeproject images ={images_video} setImages ={setimages_video} docs={docs} setDocs={setDocs} /> :null
             }
            <br />
          

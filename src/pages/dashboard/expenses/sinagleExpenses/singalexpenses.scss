@@ -1,0 +1,94 @@
+.singaleinvoice{
+    width: 100%;
+    height: 100%;
+
+    .invoices_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+    }
+    .center-invoice{
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    
+        .invoice{
+            border: 1px solid #bcbcbd;
+            width: 60%;
+            height: 100%;
+            background-color: white;
+            .invoice-header{
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ebe8e8;
+            
+            .info-company{
+                .date-gate{
+                    margin-top: 10px;
+                    color: #218bc7;
+                }
+            }
+            .image-invoice{
+                width: 100px;
+            }
+      
+            }
+            .compare-deatils-company-client{
+                width: 100%;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h6{
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                p{
+                    color: #6F6E70;
+                    margin-bottom: 5px;
+                }
+                
+            }
+            .invoice-details{
+                padding: 20px;
+                h6{
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                p{
+                    color: #6F6E70;
+                }
+            }
+            .esatte-info{
+                padding: 20px;
+                h6{
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+                p{
+                    color: #6F6E70;
+                }
+            }
+            .price-section{
+                width: 100%;
+                padding: 20px;
+                background-color: #ebe8e8;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h6{
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+       
+    }
+}

@@ -9,4 +9,19 @@
         box-shadow: $shadow_2;
         border-radius: $border_radius;
     }
+    .fc-event{
+        width: 100%;
+        padding: 15px ;
+      
+        border: none;
+        cursor: pointer;
+      }
+      
+      /* Change the background color of the events */
+  
+      /* Change the text color of the events */
+      .fc-event-title .my-event {
+        color: #ffffff !important;
+      }
+   
 }

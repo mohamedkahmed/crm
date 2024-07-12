@@ -1,19 +1,18 @@
-/* eslint-disable no-unused-vars */
 import { HiArrowLongRight } from "react-icons/hi2";
 import { SingleBraedcrumb } from "../../../../components";
 import { Link, NavLink , useNavigate} from "react-router-dom";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
-import "./UpdateExp.scss"
-const UpdateExp = () => {
-    const navigate = useNavigate();
-    const onSubmit = (e) => {
-      e.preventDefault();
-      navigate("/invoices", { replace: true });
-    };
+import "./AddExpenses.scss";
+const AddExpenses = () => {
+  const navigate = useNavigate();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    navigate("/invoices", { replace: true });
+  };
   return (
-    <section className='updateExp_section_wrapper'>
+    <section className="addExpenses_section_wrapper">
       <div className="container">
-      <div className="updateExp_top">
+        <div className="addExp_top">
           <div className="m-b-c">
             <SingleBraedcrumb icon={<FaMoneyCheckDollar />} title="المصروفات" />
           </div>
@@ -24,9 +23,9 @@ const UpdateExp = () => {
             </NavLink>
           </div>
         </div>
-        <div className="updateExp_box">
+        <div className="addExp_box">
         <div className="add-text">
-              <p><span></span>تعديل مصروف </p>
+              <p>اضافة مصروف </p>
             </div>
             <form action="" onSubmit={onSubmit}>
               <div className="main-inputs">
@@ -77,7 +76,7 @@ const UpdateExp = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default UpdateExp
+export default AddExpenses;

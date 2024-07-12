@@ -56,7 +56,7 @@ const Expenses = () => {
             {row.procedure}
           </button>
           <div className="dropdown-menu">
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/expenses/234">
               عرض <BiSolidShow />
             </Link>
             <Link className="dropdown-item" to="/updateExp/123">
@@ -307,7 +307,7 @@ const Expenses = () => {
               <SingleBraedcrumb icon={<FaMoneyCheckDollar />} title="المصروفات" />
             </div>
             <div className="add-new">
-              <NavLink to="/addExpenses">
+              <NavLink to="/Addexpenses">
                 <FiPlus />
                 اضافة جديد
               </NavLink>

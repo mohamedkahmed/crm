@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
-import "./singaleinvoic.scss"
+
+import "./singalexpenses.scss"
 import {SingleBraedcrumb} from "../../../../components";
 import { Link, NavLink } from "react-router-dom";
 import { FaFileInvoice } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 import logo from "../../../../assets/images/logo.png"
 import CoustomeLink from "../../../../components/coutomeLink/CoustomeLink";
-const Singaleinvoice = () => {
+const Singalexpenses = () => {
   return (
     <div className="singaleinvoice">
         <div className="container">
@@ -15,7 +16,7 @@ const Singaleinvoice = () => {
               <SingleBraedcrumb icon={<FaFileInvoice />} title="الفواتير" />
             </div>
      
-            <CoustomeLink  url={"/invoices"} text={"عوده"}/>
+            <CoustomeLink  url={"/expenses"} text={"عوده"}/>
          
         </div>
         <div className="center-invoice">
@@ -70,4 +71,4 @@ const Singaleinvoice = () => {
   )
 }
 
-export default Singaleinvoice
+export default Singalexpenses

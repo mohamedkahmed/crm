@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./pages/error/Error";
-import {Home,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, AddPower, Calendar, UpdateInvoices, UpdateExp, AddExpenses ,Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
+import {Home,AddInvoices,UpdateExp,UpdateInvoices,Allmeeting,AddExpenses ,AddPower,Meeting,Addmeeting,Singalemeeting ,Singalexpenses,Singaleinvoice,UpdateReports,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
 import { AddEmployees ,AddProject, AddClient, AddMediator } from "./components";
 import Login from "./pages/auth/login/Login";
 import ForgetPass from "./pages/auth/forgetPass/forgetPass";
@@ -41,6 +41,11 @@ const App = () => {
 <Route path="powers/:id" element={<Singalepower/>}/>
 <Route path="update-report/:id" element={<UpdateReports/>}/>
 <Route path="invoices/:id" element={<Singaleinvoice/>}/>
+<Route path="expenses/:id" element={<Singalexpenses/>}/>
+<Route path="meeting" element={<Meeting/>}/>
+<Route path="meeting/:id" element={<Singalemeeting/>}/>
+<Route path="AddMeeting" element={<Addmeeting/>}/>
+<Route path="all-meeting" element={<Allmeeting/>}/>
 </Route>
 
      <Route path="*" element={<Error/>}/>
