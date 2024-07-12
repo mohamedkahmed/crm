@@ -16,7 +16,7 @@ const Singalexpenses = () => {
               <SingleBraedcrumb icon={<FaFileInvoice />} title="الفواتير" />
             </div>
      
-            <CoustomeLink  url={"/invoices"} text={"عوده"}/>
+            <CoustomeLink  url={"/expenses"} text={"عوده"}/>
          
         </div>
         <div className="center-invoice">

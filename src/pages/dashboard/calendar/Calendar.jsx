@@ -7,10 +7,7 @@ import allLocales from '@fullcalendar/core/locales-all'
 import SingleBraedcrumb from "../../../components/singlebraedcrumb/SingleBraedcrumb"
 import "./Calendar.scss";
 const Calendar = () => {
-  const handeleventclik = (event) => {
-const targetevent = event.event.id
-console.log(targetevent);
-  }
+ 
 
   return (
     <>
@@ -38,8 +35,7 @@ console.log(targetevent);
           ]}
           locales={allLocales}
            locale={'ar'}
-           eventClassNames="my-event" 
-           eventClick={handeleventclik}
+         
       />
           </div>
         </div>

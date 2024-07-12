@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 
 import { SingleBraedcrumb } from '../../../../components'
 import { MdLibraryAddCheck, MdOutlineDateRange  } from 'react-icons/md'
 import { FiPlus } from 'react-icons/fi'
 import { PiPencilLineThin } from "react-icons/pi";
-import PowersUpdateTabel  from "./PowersUpdateTabel"
+import PowersUpdateTabel from "./PowersUpdateTabel"
 import { NavLink, useNavigate } from "react-router-dom";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import "./UpdatePowers.scss";
@@ -111,9 +112,9 @@ const UpdatePowers = () => {
               />
             </div>
             <div className="add-new">
-              <NavLink to="/addPower">
+              <NavLink to="/powers">
                 <FiPlus />
-                اضافة صلاحية
+                            عوده
               </NavLink>
             </div>
           </div>
@@ -122,7 +123,7 @@ const UpdatePowers = () => {
 
           <div className="updatePermissions_box">
             <div className="top_permission">
-                <h5>تفاصيل الصلاحية</h5>
+                <h5> التعديل على  الصلاحية</h5>
                 <div className="add_permission_date">
                     <p>تاريخ الانشاء</p>
                     <span><MdOutlineDateRange /> 15 اغسطس, 2024 </span>
@@ -146,7 +147,7 @@ const UpdatePowers = () => {
                     </div>
                     </div>
                     </div>
-                    <PowersUpdateTabel    data={data}  columns={columns}/>
+                  <PowersUpdateTabel columns={columns} data={data} />
                     <div className="btn-down">
                 <NavLink className="cancel" to="/powers">
                   الغاء

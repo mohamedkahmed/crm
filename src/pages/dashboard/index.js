@@ -22,19 +22,15 @@ import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
 import Singalepower from "./powers/Singalepower/Singalepower.jsx";
 import UpdateReports from "./reports/updateReports/UpdateReports.jsx";
 import Singaleinvoice from "./invoices/singaleInvoices/Singaleinvoice.jsx";
-<<<<<<< HEAD
-import Addexpenses from "./expenses/addExpenses/Addexpenses.jsx";
-import Updateexpenses from "./expenses/updateExpenses/Updateexpenses.jsx";
+// import Addexpenses from "./expenses/addExpenses/Addexpenses.jsx";
+// import Updateexpenses from "./expenses/updateExpenses/Updateexpenses.jsx";
 import Singalexpenses from "./expenses/sinagleExpenses/Singalexpenses.jsx"
 import Meeting from "./meeting/Meeting.jsx";
 import Singalemeeting from "./meeting/singaleMeeting/Singalemeeting.jsx";
 import Addmeeting from "./meeting/addMeeting/Addmeeting.jsx";
-export {Home,Addexpenses,Meeting ,Addmeeting,Singalemeeting,Singalexpenses,Updateexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
-=======
 import AddPower from "./powers/addPower/AddPower.jsx"
 import AddExpenses from "./expenses/addExpenses/AddExpenses.jsx";
 import UpdateInvoices from "./invoices/updateInvoices/UpdateInvoices.jsx";
 import UpdateExp from "./expenses/updateExp/UpdateExp.jsx";
 
-export {Home, UpdateExp, UpdateInvoices, AddExpenses, AddPower ,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
->>>>>>> master
+export {Home,Meeting , AddExpenses,AddPower ,UpdateInvoices,UpdateExp,Addmeeting,Singalemeeting,Singalexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
