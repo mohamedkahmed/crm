@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./pages/error/Error";
-import {Home,AddInvoices,UpdateExp,UpdateInvoices,Allmeeting,AddExpenses ,AddPower,Meeting,Addmeeting,Singalemeeting ,Singalexpenses,Singaleinvoice,UpdateReports,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
+import {Home,AddInvoices,UpdateExp,UpdateInvoices, UserProfile ,UpdateMeeting,Allmeeting,AddExpenses ,AddPower,Meeting,Addmeeting,Singalemeeting ,Singalexpenses,Singaleinvoice,UpdateReports,Singalepower,Mediator,UpdatePowers, Updateclient,Updateemployeer,UpdateProject ,Updatemediator,Client, Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout, SingleProject, ReportDetails} from "./pages/dashboard";
 import { AddEmployees ,AddProject, AddClient, AddMediator } from "./components";
 import Login from "./pages/auth/login/Login";
 import ForgetPass from "./pages/auth/forgetPass/forgetPass";
@@ -37,6 +37,7 @@ const App = () => {
 <Route path="update-medtiator/:id" element={<Updatemediator/>}/>
 <Route path="update-power/:id" element={<UpdatePowers/>}/>
 <Route path="updateExp/:id" element={<UpdateExp/>}/>
+<Route path="updateMeeting/:id" element={<UpdateMeeting/>}/>
 <Route path="addInvoices" element={<AddInvoices/>}/>
 <Route path="powers/:id" element={<Singalepower/>}/>
 <Route path="update-report/:id" element={<UpdateReports/>}/>
@@ -46,6 +47,8 @@ const App = () => {
 <Route path="meeting/:id" element={<Singalemeeting/>}/>
 <Route path="AddMeeting" element={<Addmeeting/>}/>
 <Route path="all-meeting" element={<Allmeeting/>}/>
+<Route path="userProfile" element={<UserProfile/>}/>
+
 </Route>
 
      <Route path="*" element={<Error/>}/>

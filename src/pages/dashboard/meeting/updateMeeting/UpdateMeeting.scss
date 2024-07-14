@@ -1,7 +1,7 @@
-@import "../../../../components/mixin/Mixin.scss";
 @import "../../../../components/variables/Variables.scss";
-.add-meeting{
-    .calendar_top{
+@import "../../../../components/mixin/Mixin.scss";
+.updateMeeting_section_wrapper{
+    .updateMeeting_top{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -11,7 +11,7 @@
             @include Btn_style;
         }
     }
-    .add-meeting-box{
+    .updateMeeting-box{
         margin-top: 30px;
         padding: 30px;
         background-color: $black_1;
@@ -74,6 +74,7 @@
                     display: flex;
                     align-items: center;
                     width: 100%;
+                    gap: 20px;
                     div {
                         display: flex;
                         flex-direction: column;

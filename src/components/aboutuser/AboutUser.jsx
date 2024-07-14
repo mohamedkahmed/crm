@@ -5,6 +5,7 @@ import { IoMdLogOut } from "react-icons/io";
 import userImage from "../../assets/images/user.png";
 import "./AboutUser.scss";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const AboutUser = () => {
 
   return (
@@ -45,10 +46,10 @@ const AboutUser = () => {
             </div>
   </button>
   <div className="dropdown-menu">
-    <a className="dropdown-item" href="#">
+    <Link className="dropdown-item" to="/userProfile">
     إعدادات الحساب <IoSettingsOutline />
-    </a>
-    <a className="dropdown-item" href="#" > تسجيل خروج <IoMdLogOut /> </a>
+    </Link>
+    <Link className="dropdown-item" to="#" > تسجيل خروج <IoMdLogOut /> </Link>
   </div>
         </div>
     </div>

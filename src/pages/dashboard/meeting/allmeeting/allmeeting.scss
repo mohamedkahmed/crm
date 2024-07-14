@@ -1,6 +1,16 @@
 @import "../../../../components/variables/Variables.scss";
 @import "../../../../components/mixin/Mixin.scss";
 .all-meeting{
+    .calendar_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .add-new {
+        a {
+            @include Btn_style;
+        }
+    }
     .meeting-box{
         margin: $margin-top;
         background-color: $black-1;

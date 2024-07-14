@@ -77,7 +77,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-          <NavLink onClick={closeClick} to="/meeting" className={pathName === "/addmeeting" ? "active" : null}>
+          <NavLink onClick={closeClick} to="/meeting" className={pathName === "/addmeeting" || pathName === "/updateMeeting/123" || pathName === "/all-meeting" || pathName === "/addMeeting" ? "active" : null}>
             {" "}
             <MdMeetingRoom />
             <p>الإجتماعات</p>{" "}

@@ -1,10 +1,11 @@
 import "./allmeeting.scss"
 import SingleBraedcrumb from "../../../../components/singlebraedcrumb/SingleBraedcrumb"
 import { MdMeetingRoom } from "react-icons/md";
+import { HiArrowLongRight } from "react-icons/hi2";
 import CoustomeLink from "../../../../components/coutomeLink/CoustomeLink";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import employeesImage from "../../../../assets/images/employees-user.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
@@ -42,7 +43,7 @@ const Allmeeting = () => {
               <div className="dropdown-menu">
               <Link className="dropdown-item" to="/meeting/123">عرض <BiSolidShow />
               </Link>
-                <Link className="dropdown-item" to="/update-meeting/123">
+                <Link className="dropdown-item" to="/updateMeeting/123">
                   تعديل <GrEdit />
                 </Link>
                 <Link className="dropdown-item" style={{ color: "red" }} href="#">
@@ -223,15 +224,18 @@ const Allmeeting = () => {
   return (
     <div className="all-meeting">
     <div className="container">
-        <div className="calendar_top">
-            <div className="m-b-c">
-                <SingleBraedcrumb icon={<MdMeetingRoom />} title="الإجتماعات" />
-            </div>
-            <div className="btn-container">
-                <CoustomeLink url={"/meeting"} text={" عوده"} />
-            
-            </div>
-        </div>  
+    <div className="calendar_top">
+                    <div className="m-b-c">
+                    <SingleBraedcrumb icon={<MdMeetingRoom />} title="الإجتماعات" />
+                    </div>
+                    <div className="add-new">
+                    {" "}
+                    <NavLink to="/meeting">
+                    <HiArrowLongRight />
+                    عودة
+                    </NavLink>{" "}
+                </div>
+        </div> 
         <div className="meeting-box">
         <div className="box-top">
           <div className="title">

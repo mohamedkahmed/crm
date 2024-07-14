@@ -1,35 +1,33 @@
-import { useParams } from "react-router-dom"
-import { MdMeetingRoom } from "react-icons/md";
 import { HiArrowLongRight } from "react-icons/hi2";
-import { NavLink, useNavigate } from "react-router-dom";
-import { SingleBraedcrumb } from "../../../../components"
-import "./Singalemeeting.scss"
-const Singalemeeting = () => {
-    const {id} = useParams();
+import { SingleBraedcrumb } from "../../../../components";
+import { MdMeetingRoom } from "react-icons/md";
+import { Link, NavLink , useNavigate} from "react-router-dom";
+import "./UpdateMeeting.scss";
+const UpdateMeeting = () => {
     const navigate = useNavigate();
     const onSubmit = (e) => {
       e.preventDefault();
       navigate("/all-meeting", { replace: true });
     };
   return (
-    <div className="sinagle-meeting"> 
-    <div className="container">
-        <div className="meeting_top">
-              <div className="m-b-c">
-              <SingleBraedcrumb icon={<MdMeetingRoom />} title="الإجتماعات" />
-              </div>
-              <div className="add-new">
-              {" "}
-              <NavLink to="/all-meeting">
-              <HiArrowLongRight />
-              عودة
-              </NavLink>{" "}
-          </div>
-    </div>
-    <div className="sinagle-meeting-box">
-      <h6><span></span>تفاصيل الإجتماع </h6>
-      <form action="" onSubmit={onSubmit}>
-              <div className="main-inputs">
+    <section className='updateMeeting_section_wrapper'>
+      <div className="container">
+      <div className="updateMeeting_top">
+                    <div className="m-b-c">
+                    <SingleBraedcrumb icon={<MdMeetingRoom />} title="الإجتماعات" />
+                    </div>
+                    <div className="add-new">
+                    {" "}
+                    <NavLink to="/all-meeting">
+                    <HiArrowLongRight />
+                    عودة
+                    </NavLink>{" "}
+                </div>
+        </div> 
+        <div className="updateMeeting-box">
+                    <h6> <span></span>تعديل إجتماع </h6>
+                    <form action="" onSubmit={onSubmit}>
+                    <div className="main-inputs">
                 <div className="chi-in">
                   <div>
                     <label>عنوان الإجتماع</label>
@@ -61,11 +59,10 @@ const Singalemeeting = () => {
                 </button>
               </div>
             </form>
-    </div>
-    </div>
-    
-    </div>
+        </div>
+      </div>
+    </section>
   )
 }
 
-export default Singalemeeting
+export default UpdateMeeting
