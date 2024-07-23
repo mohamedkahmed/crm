@@ -14,6 +14,7 @@ import { IoMdSettings } from "react-icons/io";
 import { MdLibraryAddCheck } from "react-icons/md";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
 import { FaAngleLeft, FaChevronDown } from "react-icons/fa6";
+import { MdAdminPanelSettings } from "react-icons/md";
 import { useLocation } from "react-router-dom";
 import "./Sidebar.scss";
 import { NavLink } from "react-router-dom";
@@ -42,7 +43,7 @@ const Sidebar = () => {
         <ul>
           <li>
             <NavLink onClick={closeClick} to="/">
-              <FaHome /> <p>الرئيسية</p>{" "}
+              <FaHome /> <p>مهامى</p>{" "}
             </NavLink>
           </li>
           <li>
@@ -125,7 +126,10 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-
+          <NavLink  to="/expenses">
+          <FaMoneyCheckDollar />
+          <p>المصروفات</p>{" "}
+        </NavLink>
             <NavLink
               className={pathName === "/expenses" || pathName === "/update-power/123" || pathName === "/addPower" || pathName === "/addExpenses"  ? "active" : ""}
               to="/powers"
@@ -151,9 +155,10 @@ const Sidebar = () => {
               <MdLibraryAddCheck />
               <p>الصلاحيات</p>{" "}
             </NavLink>
-            <NavLink  to="/expenses" className={pathName === "/addExpenses" ? "active" : null}>
-              <FaMoneyCheckDollar />
-              <p>المصروفات</p>{" "}
+           
+              <NavLink  to="/admin" >
+              <MdAdminPanelSettings />
+              <p>ادمن</p>{" "}
             </NavLink>
             </div>
           </li>

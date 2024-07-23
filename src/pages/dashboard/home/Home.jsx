@@ -1,8 +1,23 @@
 import { GiStabbedNote } from "react-icons/gi";
 import { PiBuildingsFill } from "react-icons/pi";
 import { BiSolidReport } from "react-icons/bi";
+import Chart from "chart.js/auto";
+import {Pie} from "react-chartjs-2"
 import "./Home.scss";
 const Home = () => {
+  const labels = ["فواتير مستحقه" , "تم الإنشاء"  , "فواتير ملغيه" , "لم يتم الدفع "];
+  const backgrounds = ["#36A2EB" ,"#FFCE56" , "#FF6384", "#4BC0C0"]
+  const data = {
+    labels: labels,
+    datasets: [
+    {
+
+    backgroundColor:backgrounds,
+    data: [ 2, 20, 30, 45],
+    },
+    ],
+    }
+
   return (
     
   <div className="home">
@@ -98,7 +113,10 @@ const Home = () => {
                 </div>
                 <div className="col-4"> 
                   <div className="center">
-                      center
+                  <span>تفاصيل الفواتير</span>
+                      <div className="chart">
+                          <Pie data={data} />
+                      </div>
                 </div>
                 </div>
               <div className="col-3"> 

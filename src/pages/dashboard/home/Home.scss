@@ -58,6 +58,13 @@
         border-radius: $border-radius;
         padding: $padding-15;
         box-shadow: $shadow-2;
+        .chart{
+            width: 70%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
     .right{
         .parent-section{
