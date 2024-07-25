@@ -5,12 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { SingleBraedcrumb } from "../../../../components"
 import "./Singalemeeting.scss"
 const Singalemeeting = () => {
-    const {id} = useParams();
-    const navigate = useNavigate();
-    const onSubmit = (e) => {
-      e.preventDefault();
-      navigate("/all-meeting", { replace: true });
-    };
+
   return (
     <div className="sinagle-meeting"> 
     <div className="container">
@@ -28,39 +23,29 @@ const Singalemeeting = () => {
     </div>
     <div className="sinagle-meeting-box">
       <h6><span></span>تفاصيل الإجتماع </h6>
-      <form action="" onSubmit={onSubmit}>
               <div className="main-inputs">
                 <div className="chi-in">
                   <div>
-                    <label>عنوان الإجتماع</label>
-                    <input type="text" name="text" required defaultValue={"اجتماع الرايه "} />
+                    <h6>عنوان الإجتماع</h6>
+                    <span>اجتماع الرايه </span>
                   </div>
                   <div>
-                    <label>تاريخ الإجتماع</label>
-                    <input type="date" name="date"  required />
+                    <h6>تاريخ الإجتماع</h6>
+                    <span>12, اغسطس 2024</span>
                   </div>
                 </div>
                 <div className="add_nots">
                   <div>
-                  <label>تفاصيل الإجتماع</label>
-                  <textarea  name="text" id="" defaultValue={"هذا الاجتماع بخصوص مشروع الرايه"}></textarea>
+                  <h6>تفاصيل الإجتماع</h6>
+                  <span>هذا الاجتماع بخصوص مشروع الرايه Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi cupiditate animi hic reiciendis voluptates dicta atque voluptatibus voluptate odio veniam qui nulla odit quos alias, facilis illo? Repudiandae, dolorum perspiciatis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis neque earum adipisci officiis tempore sequi quaerat tenetur deleniti dolorum in, possimus atque at quia suscipit eligendi non. Ex, sed laboriosam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga perspiciatis odit porro voluptates. Facere, delectus! Aut odit, voluptate eligendi beatae quibusdam incidunt accusantium assumenda consectetur commodi nihil, doloribus impedit nulla?</span>
                   </div>
                   <div>
-                    <label>نتائج الإجتماع</label>
-                    <textarea  name="text" id="" defaultValue={"نتائج الاجتماع"}></textarea>
+                    <h6>نتائج الإجتماع</h6>
+                    <span>نتائج الاجتماع</span>
                     </div>
                 </div>
 
               </div>
-              <div className="btn-down">
-                <NavLink className="cancel" to="/all-meeting">
-                  الغاء
-                </NavLink>
-                <button className="save" type="submit">
-                  حفظ
-                </button>
-              </div>
-            </form>
     </div>
     </div>
     
