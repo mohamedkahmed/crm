@@ -1,4 +1,4 @@
-import {UpdatemediatorUi} from "../../../../components"
+import {UpdatemediatorUi} from "../../../../components/crm"
 
 
 const Updatemediator = () => {

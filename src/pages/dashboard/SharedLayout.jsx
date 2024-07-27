@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from 'react-router-dom'
-import {Sidebar, Topbar} from "../../components"
+import {Sidebar, Topbar} from "../../components/layout"
 import "./SharedLayout.scss"
 const SharedLayout = () => {
   const user = true;

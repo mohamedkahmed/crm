@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import  { useState, useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { PiBuildingsFill } from "react-icons/pi";
 import { FiPlus } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";

@@ -1,5 +1,5 @@
 import { GiStabbedNote } from "react-icons/gi";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { FiPlus } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { BiSolidShow } from "react-icons/bi";

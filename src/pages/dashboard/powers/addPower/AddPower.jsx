@@ -4,7 +4,7 @@ import { MdLibraryAddCheck } from "react-icons/md";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { PiPencilLineThin } from "react-icons/pi";
 import PowersTabel from "../PowersTabel"
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import "./AddPower.scss"
 const AddPower = () => {
   const columns = [

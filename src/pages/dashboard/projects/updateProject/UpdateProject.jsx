@@ -1,4 +1,4 @@
-import { UpdateUi } from "../../../../components"
+import { UpdateUi } from "../../../../components/crm"
 
 
 const UpdateProject = () => {

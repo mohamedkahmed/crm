@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { FaHome, FaSearch } from "react-icons/fa";
 import { MdContentPasteGo } from "react-icons/md";
 import { NavLink, Link } from "react-router-dom";

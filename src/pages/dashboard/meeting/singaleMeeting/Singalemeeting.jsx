@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { MdMeetingRoom } from "react-icons/md";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { NavLink, useNavigate } from "react-router-dom";
-import { SingleBraedcrumb } from "../../../../components"
+import { SingleBraedcrumb } from "../../../../components/layout"
 import "./Singalemeeting.scss"
 const Singalemeeting = () => {
 

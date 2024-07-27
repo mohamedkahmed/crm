@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { PiBuildingsFill } from "react-icons/pi";
 import { FiPlus } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";

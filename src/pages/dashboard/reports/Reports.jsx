@@ -2,7 +2,7 @@ import { BiSolidReport } from "react-icons/bi";
 import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { FaSearch } from "react-icons/fa";
 import employeesImage from "../../../assets/images/employees-user.png";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";

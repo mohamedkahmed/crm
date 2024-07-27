@@ -1,10 +1,10 @@
-import { SingleBraedcrumb } from '../../../../components'
+import { SingleBraedcrumb } from '../../../../components/layout'
 import { MdLibraryAddCheck  } from 'react-icons/md'
 import employeesImage from "../../../../assets/images/employees-user.png";
 // import { FiPlus } from 'react-icons/fi'
 // import { PiPencilLineThin } from "react-icons/pi";
 // import { NavLink } from 'react-router-dom'
-import CoustomeLink from '../../../../components/coutomeLink/CoustomeLink';
+import {CoustomeLink} from '../../../../components/common';
 import "./sinaglepower.scss"
 import SingaleTabel from './SingaleTabel';
 const Singalepower = () => {

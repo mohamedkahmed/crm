@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { SingleBraedcrumb } from '../../../../components'
+import { SingleBraedcrumb } from '../../../../components/layout'
 import { MdLibraryAddCheck, MdOutlineDateRange  } from 'react-icons/md'
 import { FiPlus } from 'react-icons/fi'
 import { PiPencilLineThin } from "react-icons/pi";

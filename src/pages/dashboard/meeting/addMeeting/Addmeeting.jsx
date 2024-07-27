@@ -2,7 +2,7 @@ import { MdMeetingRoom } from "react-icons/md";
 import { HiArrowLongRight } from "react-icons/hi2";
 import "./addmeeting.scss"
 import { Link, NavLink , useNavigate} from "react-router-dom";
-import { SingleBraedcrumb } from "../../../../components"
+import { SingleBraedcrumb } from "../../../../components/layout"
 const Addmeeting = () => {
   const navigate = useNavigate();
   const onSubmit = (e) => {

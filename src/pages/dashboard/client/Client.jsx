@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import {SingleBraedcrumb} from "../../../components";
+import {SingleBraedcrumb} from "../../../components/layout";
 import { FaSearch } from "react-icons/fa";
 import { FiPlus } from "react-icons/fi";
 import employeesImage from "../../../assets/images/employees-user.png";

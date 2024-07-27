@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import  { useState } from "react";
-import {SingleBraedcrumb } from "../../../components";
+import {SingleBraedcrumb } from "../../../components/layout";
 import { FaSearch } from "react-icons/fa";
 import { MdLibraryAddCheck } from "react-icons/md";
 import { FiPlus } from "react-icons/fi";

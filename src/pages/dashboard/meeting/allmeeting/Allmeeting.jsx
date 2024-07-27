@@ -1,8 +1,8 @@
 import "./allmeeting.scss"
-import SingleBraedcrumb from "../../../../components/singlebraedcrumb/SingleBraedcrumb"
+import {SingleBraedcrumb} from "../../../../components/layout"
 import { MdMeetingRoom } from "react-icons/md";
 import { HiArrowLongRight } from "react-icons/hi2";
-import CoustomeLink from "../../../../components/coutomeLink/CoustomeLink";
+import {CoustomeLink} from "../../../../components/common";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import employeesImage from "../../../../assets/images/employees-user.png";
 import { Link, NavLink } from "react-router-dom";
