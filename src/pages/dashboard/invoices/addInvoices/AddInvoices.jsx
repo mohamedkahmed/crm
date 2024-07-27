@@ -1,7 +1,7 @@
 import { HiArrowLongRight } from "react-icons/hi2";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaFileInvoice } from "react-icons/fa";
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import "./AddInvoices.scss";
 const AddInvoices = () => {
     const navigate = useNavigate();

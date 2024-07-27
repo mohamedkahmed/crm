@@ -4,7 +4,7 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import allLocales from '@fullcalendar/core/locales-all'
-import SingleBraedcrumb from "../../../components/singlebraedcrumb/SingleBraedcrumb"
+import {SingleBraedcrumb} from "../../../components/layout"
 import "./Calendar.scss";
 const Calendar = () => {
  

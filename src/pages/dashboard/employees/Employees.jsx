@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import React, { useState } from "react";
-import { SingleBraedcrumb } from "../../../components";
+import { SingleBraedcrumb } from "../../../components/layout";
 import { FaSearch } from "react-icons/fa";
 import { HiUsers } from "react-icons/hi";
 import { FiPlus } from "react-icons/fi";
@@ -13,7 +13,7 @@ import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
 import { MdDelete } from "react-icons/md";
 import "./Employees.scss";
-import CoustomeLink from "../../../components/coutomeLink/CoustomeLink";
+import {CoustomeLink} from "../../../components/common";
 const Employees = () => {
   const columns = [
     {

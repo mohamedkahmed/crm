@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import "./singaleinvoic.scss"
-import {SingleBraedcrumb} from "../../../../components";
+import {SingleBraedcrumb} from "../../../../components/layout";
 import { Link, NavLink } from "react-router-dom";
 import { FaFileInvoice } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 import logo from "../../../../assets/images/logo.png"
-import CoustomeLink from "../../../../components/coutomeLink/CoustomeLink";
+import {CoustomeLink} from "../../../../components/common";
 const Singaleinvoice = () => {
   return (
     <div className="singaleinvoice">

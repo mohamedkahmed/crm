@@ -1,4 +1,4 @@
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaEdit } from "react-icons/fa";
 import { MdOutlineDateRange } from "react-icons/md";

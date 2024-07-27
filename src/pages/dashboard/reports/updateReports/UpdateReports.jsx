@@ -1,7 +1,7 @@
 
 import { HiArrowLongRight } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import { BiSolidReport } from "react-icons/bi";
 
 const UpdateReports = () => {

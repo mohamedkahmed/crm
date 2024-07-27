@@ -5,7 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 import { useState } from "react";
 import { FaUsers } from "react-icons/fa";
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import { SelectOPtions } from "../../../../utils";
 
 const Updateemployeer = () => {

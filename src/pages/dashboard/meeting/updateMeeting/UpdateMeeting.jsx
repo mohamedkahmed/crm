@@ -1,5 +1,5 @@
 import { HiArrowLongRight } from "react-icons/hi2";
-import { SingleBraedcrumb } from "../../../../components";
+import { SingleBraedcrumb } from "../../../../components/layout";
 import { MdMeetingRoom } from "react-icons/md";
 import { Link, NavLink , useNavigate} from "react-router-dom";
 import "./UpdateMeeting.scss";
