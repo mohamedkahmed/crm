@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import  { useState } from "react";
 /* import {SideBar} from "../../assets/Data/Data"; */
 import logo from "../../../assets/images/logo.png";
 import { FaHome } from "react-icons/fa";
@@ -159,6 +160,10 @@ const Sidebar = () => {
               <NavLink  to="/admin" >
               <MdAdminPanelSettings />
               <p>ادمن</p>{" "}
+            </NavLink>
+            <NavLink  to="/all-users" >
+            <FaUsers />
+              <p>جميع مستخدمين</p>{" "}
             </NavLink>
             </div>
           </li>

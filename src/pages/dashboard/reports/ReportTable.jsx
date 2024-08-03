@@ -10,7 +10,6 @@ const ReportTable = ({columns , data}) => {
         <DataTable
           columns={columns}
           data={data}
-          selectableRows
           fixedHeader
           pagination
         ></DataTable>

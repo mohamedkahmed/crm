@@ -28,6 +28,10 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
   return (
     <>
       <div className="project_box">
+      <div className="project_address">
+            <label htmlFor="exampleFormControlSelect616"> اسم المشروع*</label>
+            <input type="text" name="project-name" id="exampleFormControlSelect616" />
+          </div>
           <div className="property_type">
             {/* estate type select options*/}
           <div className="main_group">

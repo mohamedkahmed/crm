@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { SingleBraedcrumb } from "../../../components/layout";
 import { FaHome, FaSearch } from "react-icons/fa";
@@ -35,10 +36,6 @@ import MymissionTabel from "./MymissionTabel";
       selector: (row) => row.missionDetails,
     },
     {
-      name: "حاله المهمة",
-      selector: (row) => row.missionState,
-    },
-    {
       name: "مضافه من قبل",
       selector: (row) => row.addBefore,
     },
@@ -62,9 +59,7 @@ import MymissionTabel from "./MymissionTabel";
             <Link className="dropdown-item" to="/update-project/67">
               تعديل بيانات المشروع <GrEdit />
             </Link>
-            <Link className="dropdown-item" style={{ color: "red" }} href="#">
-              حذف <MdDelete style={{ color: "red" }} />
-            </Link>
+        
           </div>
         </div>
       ),

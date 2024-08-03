@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     userinfo:{
         name:"yousef",
-        role:"admin"
+        type:"user",
+       role:[{}]
+        
     }
 }
 const user = createSlice({

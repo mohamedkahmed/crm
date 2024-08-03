@@ -84,15 +84,7 @@ const Mission = () => {
                         id="exampleFormControlSelect3"
                       ></textarea>
                       <div className="checks_boxs">
-                        <div>
-                          {" "}
-                          <input
-                            type="checkbox"
-                            name="vehicle1"
-                            value="عرض بيانات المشروع"
-                          />
-                          <label htmlFor="vehicle1">عرض بيانات المشروع</label>
-                        </div>
+                    
                         <div>
                           {" "}
                           <input
@@ -206,15 +198,7 @@ const Mission = () => {
                         id="exampleFormControlSelect3"
                       ></textarea>
                       <div className="checks_boxs">
-                        <div>
-                          {" "}
-                          <input
-                            type="checkbox"
-                            name="vehicle1"
-                            value="عرض بيانات المشروع"
-                          />
-                          <label htmlFor="vehicle1">عرض بيانات المشروع</label>
-                        </div>
+                    
                         <div>
                           {" "}
                           <input

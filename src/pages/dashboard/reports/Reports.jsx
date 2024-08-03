@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BiSolidReport } from "react-icons/bi";
 import { BiSolidShow } from "react-icons/bi";
 import { GrEdit } from "react-icons/gr";
@@ -11,10 +12,7 @@ import ReportTable from "./ReportTable";
 import { Link } from "react-router-dom";
 const Reports = () => {
   const columns = [
-    {
-      name: "رقم المهمة",
-      selector: (row) => row.id,
-    },
+
     {
       name: " عنوان المهمة",
       selector: (row) => row.name.text,
@@ -23,18 +21,20 @@ const Reports = () => {
       name: " إسم الموظف ",
       selector: (row) => row.name.text,
     },
-
     {
       name: " إسم المشروع ",
       selector: (row) => row.name.text,
     },
-
     {
-      name: "  تاريخ المهمة ",
+      name: "  حالة المهمة  ",
       selector: (row) => row.name.text,
     },
     {
-      name: "  أخر تحديث للمهمة  ",
+      name: "  مضافة من قبل  ",
+      selector: (row) => row.name.text,
+    },
+    {
+      name: "  تاريخ المهمة ",
       selector: (row) => row.name.text,
     },
     {
@@ -47,14 +47,10 @@ const Reports = () => {
           </button>
           <div className="dropdown-menu">
             <Link className="dropdown-item" to="/reportDetails/123">
-              عرض <BiSolidShow />
+               عرض المهمة   <BiSolidShow />
             </Link>
-            <Link className="dropdown-item" to="/update-report/34">
-              تعديل <GrEdit />
-            </Link>
-            <Link className="dropdown-item" style={{ color: "red" }} href="#">
-              حذف <MdDelete style={{ color: "red" }} />
-            </Link>
+   
+         
           </div>
         </div>
       ),
