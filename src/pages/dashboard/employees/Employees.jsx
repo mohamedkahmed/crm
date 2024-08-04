@@ -51,10 +51,10 @@ const Employees = () => {
             {row.procedure}
           </button>
           <div className="dropdown-menu">
-            <Link className="dropdown-item" to="#">
+            <Link className="dropdown-item" to="/employees/78">
               عرض <BiSolidShow />
             </Link>
-            <Link className="dropdown-item" to="/employees/78">
+            <Link className="dropdown-item" to="/employees-update/78">
               تعديل <GrEdit />
             </Link>
             <Link className="dropdown-item" style={{ color: "red" }} href="#">

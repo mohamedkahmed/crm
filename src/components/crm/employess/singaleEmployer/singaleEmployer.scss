@@ -1,0 +1,82 @@
+@import "../../../variables/Variables.scss";
+@import "../../../mixin/Mixin.scss";
+.singalemployer{
+    .singalemployer_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .add-new {
+            a {
+                &:hover {
+                    background-color: $blue-6;
+                        color: $black-1 ;
+                    svg {
+                        color: $black-1;
+                    }
+                }
+                padding: 5px 20px;
+                border: 1px solid $blue-6;
+                border-radius: $border-radius;
+                font-size: $font-14;
+                transition: $transition;
+                color: $blue-6;
+                font-size: $font-14;
+                svg {
+                    transition: $transition;
+                    color: $blue-6;
+                    margin-left: 5px;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+    }
+    .card{
+        background-color: white;
+        width: 90%;
+        padding: 15px;
+   
+        box-shadow: $shadow-3;
+        .image{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin:  10px auto;
+            border: 3px solid #eee;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .emplo_details {
+            .title_top {
+                h5 {
+                    font-size: $font-14;
+                    font-weight: 600;
+                }
+                border-bottom: 1px solid #eee;
+            }
+            .employees_content {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 18px;
+                div {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    span {
+                        color: $blue-8;
+                        font-weight: 600;
+                    }
+                    p {
+                        color: $black-8;
+                    }
+                }
+            }
+        }
+    }
+    .ContentProject{
+        margin-top: 3rem;
+    }
+}

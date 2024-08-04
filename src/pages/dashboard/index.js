@@ -20,10 +20,7 @@ import Updatemediator from "./mediator/updateMediator/Updatemediator.jsx";
 import UpdatePowers from "./powers/updatePowers/UpdatePowers.jsx";
 import AddInvoices from "./invoices/addInvoices/AddInvoices.jsx";
 import Singalepower from "./powers/Singalepower/Singalepower.jsx";
-import UpdateReports from "./reports/updateReports/UpdateReports.jsx";
 import Singaleinvoice from "./invoices/singaleInvoices/Singaleinvoice.jsx";
-// import Addexpenses from "./expenses/addExpenses/Addexpenses.jsx";
-// import Updateexpenses from "./expenses/updateExpenses/Updateexpenses.jsx";
 import Singalexpenses from "./expenses/sinagleExpenses/Singalexpenses.jsx"
 import Meeting from "./meeting/Meeting.jsx";
 import Singalemeeting from "./meeting/singaleMeeting/Singalemeeting.jsx";
@@ -36,4 +33,6 @@ import Allmeeting from "./meeting/allmeeting/Allmeeting.jsx";
 import UpdateMeeting from "./meeting/updateMeeting/UpdateMeeting.jsx";
 import UserProfile from "./userProfile/UserProfile.jsx";
 import Mymission from "./mymission/Mymission.jsx";
-export {Home,Meeting, Mymission ,UserProfile  , UpdateMeeting, Allmeeting ,AddExpenses,AddPower ,UpdateInvoices,UpdateExp,Addmeeting,Singalemeeting,Singalexpenses,AddInvoices,Singaleinvoice,UpdateReports,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}
+import Allusers from "./allUsers/Allusers.jsx";
+import SingaleEmployer from "./employees/SingaleEmployer.jsx";
+export {Home,Meeting,Allusers,SingaleEmployer ,Mymission ,UserProfile  , UpdateMeeting, Allmeeting ,AddExpenses,AddPower ,UpdateInvoices,UpdateExp,Addmeeting,Singalemeeting,Singalexpenses,AddInvoices,Singaleinvoice,Singalepower,UpdateProject,UpdatePowers,Updatemediator,Updateclient ,Updateemployeer,SingleProject,ReportDetails, Client, Mediator , Administration, Calendar, Employees, Expenses, Invoices, Mission, Powers, Projects, Reports, SharedLayout}

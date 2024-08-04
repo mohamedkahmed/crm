@@ -63,11 +63,19 @@ const AddEmployees = () => {
                   <label>الايميل*</label>
                   <input type="email" name="email" required />
                 </div>
+                <div>
+                  <label>كلمه السر *</label>
+                  <input type="password" name="phone" required />
+                </div>
               </div>
               <div className="chi-in">
                 <div>
                   <label>رقم الهاتف*</label>
                   <input type="phone" name="phone" required />
+                </div>
+                <div>
+                  <label>الوظيفه *</label>
+                  <input type="phone" name="jop" required />
                 </div>
                 <div>
                   <label>الصلاحية*</label>
