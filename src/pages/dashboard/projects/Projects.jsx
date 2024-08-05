@@ -1,31 +1,23 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SingleBraedcrumb } from "../../../components/layout";
 import { PiBuildingsFill } from "react-icons/pi";
 import { FiPlus } from "react-icons/fi";
 import { Link, NavLink } from "react-router-dom";
 import { projectsPro } from "../../../assets/Data/Data";
 import "./Projects.scss";
-const projects = () => {
-  /* 
-  const [records, setRecords] = useState(data);
-  const [selectedDate, setSelectedDate] = useState("");
-  const handleFilter = (event) => {
-    const newData = data.filter((row) => {
-      return row.name.text
-        .toLowerCase()
-        .includes(event.target.value.toLowerCase());
-    });
-    setRecords(newData);
-  };
-  const handleDate = (event) => {
-    const selectedDate = event.target.value;
-    const newData = data.filter((row) => {
-      return row.date === selectedDate;
-    });
-    setRecords(newData);
-    setSelectedDate(selectedDate);
-  }; */
+import authFetch from "../../../utils/axiosAuthfetch";
+import useQuerygetiteams from './../../../services/Querygetiteams';
+const Projects = () => {
+const{ isError , isLoading , data} =  useQuerygetiteams("projects" , "projects")
+if(isLoading) {
+  return <h2>loadding</h2>
+}
+if(isError) {
+  return <h2>error </h2>
+}
+const {allproject} = data.data
+console.log(allproject);
   return (
     <section className="main_project_wrapper">
       <div className="container">
@@ -63,34 +55,46 @@ const projects = () => {
         </div>
         {/* project table */}
         <div className="project_box">
-          {projectsPro.map((data) => {
+          {allproject.map((data) => {
             const {
-              id,
-              img,
-              realPlace,
-              realSpace,
-              installmentsNum,
-              propertyAmount,
+              _id:id,
+              projectName,
+              estateType,
+              governorate,
+              city,
+              estateNumber,
+              floor,
+              detailedAddress,
+              clientType,
+              estatePrice,
+              operationType,
+              installments,
+              installmentsPerYear,
+              areaMatter,
+              finishingQuality,
+              imagesURLs,
+              videosURLs,
+              docsURLs
             } = data;
             return (
               <div className="project_detials_box" key={id}>
-                <div className="project_img">
+                {/* <div className="project_img">
                   <img src={img} alt="project image" />
-                </div>
+                </div> */}
                 <div className="project_content">
                   <div>
-                    <p>عقار فيلا</p> <span>{realPlace}</span>
+                    <p>عقار فيلا</p> <span>{estateType}</span>
                   </div>
                   <div>
-                    <p>المساحة / متر*</p> <span>{realSpace}</span>
+                    <p>المساحة / متر*</p> <span>{areaMatter}</span>
                   </div>
                   <div>
-                    <p> عدد الاقساط / سنة</p> <span>{installmentsNum}</span>
+                    <p> عدد الاقساط / سنة</p> <span>{installmentsPerYear}</span>
                   </div>
                   <div>
                     <p>مبلغ العقار</p>{" "}
                     <span style={{ color: "#218bc7", fontWeight: "700" }}>
-                      {propertyAmount}
+                      {estatePrice}
                     </span>
                   </div>
                 </div>
@@ -98,7 +102,7 @@ const projects = () => {
                   <Link className="btn_deta" to={`/projects/${id}`}>
                     تفاصيل
                   </Link>
-                  <Link style={{backgroundColor:"#898989"}} className="btn_deta" to={`/update-project/67`}>
+                  <Link style={{backgroundColor:"#898989"}} className="btn_deta" to={`/update-project/${id}`}>
                     تعديل
                   </Link>
                   <Link style={{backgroundColor:"#9f0000"}} className="btn_deta" to={``}>
@@ -114,4 +118,4 @@ const projects = () => {
   );
 };
 
-export default projects;
+export default Projects;
