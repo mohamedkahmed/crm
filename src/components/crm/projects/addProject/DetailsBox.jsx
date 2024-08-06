@@ -30,13 +30,13 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
       <div className="project_box">
       <div className="project_address">
             <label htmlFor="exampleFormControlSelect616"> اسم المشروع*</label>
-            <input type="text" name="project-name" id="exampleFormControlSelect616" />
+            <input type="text" name="projectName" id="exampleFormControlSelect616" />
           </div>
           <div className="property_type">
             {/* estate type select options*/}
           <div className="main_group">
               {
-                <SelectOPtions options = {["فيلا" , "شقة"  , "مخزن"]} name= "estate" id="exampleFormControlSelect1" label= "اختر نوع العقار"  />
+                <SelectOPtions options = {["فيلا" , "شقة"  , "مخزن"]} name= "estateType" id="exampleFormControlSelect1" label= "اختر نوع العقار"  />
               }
             </div>
           </div>
@@ -46,7 +46,7 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
             <div className="real_inputs">
          
             {
-            <SelectOPtions options = {["الجيزه" , "القاهرة" , "المنصورة"]}name="place" id="exampleFormControlSelect2" label= "المحافظة" />
+            <SelectOPtions options = {["الجيزه" , "القاهرة" , "المنصورة"]}name="governorate" id="exampleFormControlSelect2" label= "المحافظة" />
 
             }
          
@@ -56,24 +56,24 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
             }
           
                {
-            <SelectOPtions options = {["عقار-3" , "عقار-2" , "عقار-1"]}name="estate-number" id="exampleFormControlSelect4" label= "رقم العقار" />
+            <SelectOPtions options = {["عقار-3" , "عقار-2" , "عقار-1"]}name="estateNumber" id="exampleFormControlSelect4" label= "رقم العقار" />
 
             }
          
               {
-            <SelectOPtions options = {[ "الدور العلوى" , "الدور الأرضى "]}name="estate-floor" id="exampleFormControlSelect5" label= "الدور الخاص بالعقار" />
+            <SelectOPtions options = {[ "الدور العلوى" , "الدور الأرضى "]}name="floor" id="exampleFormControlSelect5" label= "الدور الخاص بالعقار" />
 
             }
             </div>
           </div>
           <div className="project_address">
             <label htmlFor="exampleFormControlSelect6">العنوان بالتفصيل*</label>
-            <input type="text" name="adress" id="exampleFormControlSelect6" />
+            <input type="text" name="detailedAddress" id="exampleFormControlSelect6" />
           </div>
           <div className="client_dir">
         
                 {
-            <SelectOPtions options = {[ " وسيط" , " عميل مباشر  "]}name="estate-type" id="exampleFormControlSelect7" label= "  الجهة التابعة للعقار " />
+            <SelectOPtions options = {[ " وسيط" , " عميل مباشر  "]}name="clientType" id="exampleFormControlSelect7" label= "  الجهة التابعة للعقار " />
 
             }
           </div>
@@ -90,7 +90,7 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
           </div>
           <div className="project_price">
             <label htmlFor="exampleFormControlSelect8">اضف مبلغ العقار</label>
-            <input type="text" name="estate-price" id="exampleFormControlSelect8" />
+            <input type="text" name="estatePrice" id="exampleFormControlSelect8" />
           </div>
           <div className="finishing_c">
             <p className="pt-3">امكانية التقسيط</p>
@@ -105,11 +105,11 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
           </div>
           <div className="project_price">
             <label htmlFor="exampleFormControlSelect9">عدد الاقساط  / سنة</label>
-            <input type="text" name="installment-number" id="exampleFormControlSelect9"  />
+            <input type="text" name="installmentsPerYear" id="exampleFormControlSelect9"  />
           </div>
           <div className="project_price">
             <label htmlFor="exampleFormControlSelect10">المساحة / متر*</label>
-            <input type="text" name="estate-measure" id="exampleFormControlSelect10" />
+            <input type="text" name="areaMatter" id="exampleFormControlSelect10" />
           </div>
           <div className="finishing_c">
             <p className="pt-3">جودة التشطيب</p>
@@ -141,11 +141,11 @@ const DetailsBox = ({images_video , setimages_video , docs , setDocs , show_a , 
                   {" "}
                   <img src="/images/Vector.svg" alt="Vector" /> اختر من الملفات
                   </label>
-                  <input type="file" multiple className="input-file" id="files" onChange = {(e) => setDocs([...e.target.files , ...docs])}  accept ="pdf/* , doc/* , txt/*" />
-                <label htmlFor="image-video" className="dropdown-item">
+                  <input type="file" multiple className="input-file" name="files" id="files" onChange = {(e) => setDocs([...e.target.files , ...docs])}  accept ="pdf/* , doc/* , txt/*" />
+                <label htmlFor="image-video"  className="dropdown-item">
                   <img src="/images/Group.svg" alt="Group" /> اختر صورة او فيديو{" "}
                   </label>
-                  <input  onChange={(e) =>setimages_video([...e.target.files , ...images_video])} type="file"   accept="video/*,image/*" multiple className="input-file" id="image-video" />
+                  <input name="files"  onChange={(e) =>setimages_video([...e.target.files , ...images_video])} type="file"   accept="video/*,image/*" multiple className="input-file" id="image-video" />
               </div>
              
             </div>

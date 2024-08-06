@@ -8,9 +8,12 @@ import "./AddProject.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import Queryadditeam from "../../../../services/Queryadditeam";
+import authFetch from "../../../../utils/axiosAuthfetch";
 
 const AddProject = () => {
     const navigate = useNavigate();
+   const { isError , isLoading , addIteam } =  Queryadditeam("projects" , "projects")
     const [images_video , setimages_video] = useState([])
     const [images_error , setimage_error] = useState(false)
     const [show_a, setShowA] = useState();
@@ -18,12 +21,12 @@ const AddProject = () => {
     const [show_c, setShowC] = useState();
     const [docs , setDocs] = useState([])
     // handel submit project 
-const onSubmit = (e) => {
+const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget)
-    formData.set("opeartion-type" , show_a)
-    formData.set("installment-avillbale" , show_b)
-    formData.set("Finishing quality" , show_c)
+    formData.set("operationType" , show_a)
+    formData.set("installments" , show_b)
+    formData.set("finishingQuality" , show_c)
   // append list of images-videos to formData
     for(let i = 0 ; i < images_video.length ; i++) {
         formData.append(`images-videos[${i}]`, images_video[i])
@@ -35,9 +38,11 @@ const onSubmit = (e) => {
     }
     const data = Object.fromEntries(formData)
  
-    toast.success("project add sucssfuly" , {position:"top-center"})
-    console.log(data);
-    // navigate ("/projects", {replace: true})
+
+addIteam(data)
+
+  console.log(data);
+
     }
   return (
     <section className="add_project_section">
